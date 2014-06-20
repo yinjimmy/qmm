@@ -35,7 +35,7 @@
 		F4B4EF6616CA2A8B00736FFE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B4EF6516CA2A8B00736FFE /* SystemConfiguration.framework */; };
 		F4BA6EB315F499A300CE7A10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BA6EB215F499A300CE7A10 /* QuartzCore.framework */; };
 		F4BA6EBD15F499EE00CE7A10 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BA6EBC15F499EE00CE7A10 /* Security.framework */; };
-		F4DDD22D1926533C00D37F83 /* quick-x-player.app in Copy Files */ = {isa = PBXBuildFile; fileRef = F44C957215F49004004D4151 /* quick-x-player.app */; };
+		F4DDD22D1926533C00D37F83 /* player.app in Copy Files */ = {isa = PBXBuildFile; fileRef = F44C957215F49004004D4151 /* player.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 			dstPath = "$(SRCROOT)/bin";
 			dstSubfolderSpec = 0;
 			files = (
-				F4DDD22D1926533C00D37F83 /* quick-x-player.app in Copy Files */,
+				F4DDD22D1926533C00D37F83 /* player.app in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +80,7 @@
 		9FFD54641945AB2800850221 /* CreateNewProjectDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateNewProjectDialog.xib; sourceTree = "<group>"; };
 		9FFD54661945AB3800850221 /* ProjectConfigDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectConfigDialog.xib; sourceTree = "<group>"; };
 		9FFD54681945AB4300850221 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		F44C957215F49004004D4151 /* quick-x-player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-x-player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44C957215F49004004D4151 /* player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44C957615F49004004D4151 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F44C957915F49004004D4151 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F44C957A15F49004004D4151 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B08151175C89E30029F472 /* quickcocos2dx.xcodeproj */,
-				F44C957C15F49004004D4151 /* quick-x-player */,
+				F44C957C15F49004004D4151 /* player */,
 				F44C957515F49004004D4151 /* Frameworks */,
 				F44C957315F49004004D4151 /* Products */,
 			);
@@ -143,7 +143,7 @@
 		F44C957315F49004004D4151 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F44C957215F49004004D4151 /* quick-x-player.app */,
+				F44C957215F49004004D4151 /* player.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,13 +169,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F44C957C15F49004004D4151 /* quick-x-player */ = {
+		F44C957C15F49004004D4151 /* player */ = {
 			isa = PBXGroup;
 			children = (
 				F4B08159175C8A1E0029F472 /* sources */,
 				F4B08158175C8A100029F472 /* mac */,
 			);
-			name = "quick-x-player";
+			name = "player";
 			sourceTree = "<group>";
 		};
 		F4B08152175C89E30029F472 /* Products */ = {
@@ -230,9 +230,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F44C957115F49004004D4151 /* quick-x-player */ = {
+		F44C957115F49004004D4151 /* player */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F44C959015F49004004D4151 /* Build configuration list for PBXNativeTarget "quick-x-player" */;
+			buildConfigurationList = F44C959015F49004004D4151 /* Build configuration list for PBXNativeTarget "player" */;
 			buildPhases = (
 				F44C956E15F49004004D4151 /* Sources */,
 				F44C956F15F49004004D4151 /* Frameworks */,
@@ -243,9 +243,9 @@
 			);
 			dependencies = (
 			);
-			name = "quick-x-player";
-			productName = "quick-x-player";
-			productReference = F44C957215F49004004D4151 /* quick-x-player.app */;
+			name = player;
+			productName = "player";
+			productReference = F44C957215F49004004D4151 /* player.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -256,8 +256,13 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = quick.cocoachina.com;
+				TargetAttributes = {
+					F44C957115F49004004D4151 = {
+						DevelopmentTeam = 73D5UVY728;
+					};
+				};
 			};
-			buildConfigurationList = F44C956C15F49004004D4151 /* Build configuration list for PBXProject "quick-x-player" */;
+			buildConfigurationList = F44C956C15F49004004D4151 /* Build configuration list for PBXProject "player" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -275,7 +280,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				F44C957115F49004004D4151 /* quick-x-player */,
+				F44C957115F49004004D4151 /* player */,
 			);
 		};
 /* End PBXProject section */
@@ -396,6 +401,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -450,6 +456,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -499,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F44C956C15F49004004D4151 /* Build configuration list for PBXProject "quick-x-player" */ = {
+		F44C956C15F49004004D4151 /* Build configuration list for PBXProject "player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F44C958E15F49004004D4151 /* Debug */,
@@ -508,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F44C959015F49004004D4151 /* Build configuration list for PBXNativeTarget "quick-x-player" */ = {
+		F44C959015F49004004D4151 /* Build configuration list for PBXNativeTarget "player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F44C959115F49004004D4151 /* Debug */,
