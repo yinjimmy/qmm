@@ -36,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		199C2E161B63D37C0043B3E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4B08151175C89E30029F472 /* quickcocos2dx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F4DE081F16800061005DB2DB;
+			remoteInfo = quickcocos2dx;
+		};
 		F4B08155175C89E30029F472 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4B08151175C89E30029F472 /* quickcocos2dx.xcodeproj */;
@@ -233,6 +240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				199C2E171B63D37C0043B3E3 /* PBXTargetDependency */,
 			);
 			name = player;
 			productName = player;
@@ -318,6 +326,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		199C2E171B63D37C0043B3E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = quickcocos2dx;
+			targetProxy = 199C2E161B63D37C0043B3E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F44C958E15F49004004D4151 /* Debug */ = {
@@ -422,7 +438,7 @@
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/external/extra/luabinding\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/cocos2dx_support\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/tolua\"",
-					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/lua-5.1.5/src\"",
+					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/luajit/mac/include\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions/cjson\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions/zlib\"",
@@ -477,7 +493,7 @@
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/external/extra/luabinding\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/cocos2dx_support\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/tolua\"",
-					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/lua-5.1.5/src\"",
+					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/luajit/mac/include\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions/cjson\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua_extensions/zlib\"",

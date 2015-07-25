@@ -31,7 +31,7 @@ NS_CC_BEGIN
 // from 2dx
 static unsigned int _Hash(const char *key)
 {
-    unsigned int len = strlen(key);
+    size_t len = strlen(key);
     const char *end=key+len;
     unsigned int hash;
     

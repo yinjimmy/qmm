@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR/../"
-"$DIR/compile_scripts.sh" -i framework -o lib/framework_precompiled/framework_precompiled.zip -p framework -m zip
+"$DIR/compile_scripts.sh" -i framework -o lib/framework_precompiled/framework_precompiled.zip -p framework -m zip -jit
 
 echo ""
 echo "### UPDATING ###"
@@ -20,4 +20,3 @@ done
 echo ""
 echo "DONE"
 echo ""
-
