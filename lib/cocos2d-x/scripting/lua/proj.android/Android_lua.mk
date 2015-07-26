@@ -88,9 +88,7 @@ endif
 
 ifeq ($(CC_CCSTUDIO_ENABLED),1)
 LOCAL_SRC_FILES += \
-    ../cocos2dx_support/lua_cocos2dx_extensions_manual.cpp \
-    ../cocos2dx_support/lua_cocos2dx_cocostudio_manual.cpp \
-    ../cocos2dx_support/LuaCocoStudio.cpp
+    ../cocos2dx_support/lua_cocos2dx_extensions_manual.cpp
 endif
 
 ifeq ($(CC_SQLITE_ENABLED),1)

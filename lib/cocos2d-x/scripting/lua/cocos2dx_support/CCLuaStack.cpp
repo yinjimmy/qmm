@@ -61,16 +61,6 @@ extern "C" {
 #endif
 
 #include "lua_cocos2dx_manual.h"
-#if CC_CCSTUDIO_ENABLED > 0
-// Cocos Studio
-#include "LuaCocoStudio.h"
-#include "lua_cocos2dx_extensions_manual.h"
-#include "lua_cocos2dx_cocostudio_manual.h"
-#endif
-
-#if CC_CURL_ENABLED > 0
-#include "LuaCocos2dAssetsManager.h"
-#endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     #include "cocos2dx_httprequest_luabinding.h"
@@ -155,12 +145,6 @@ bool CCLuaStack::init(void)
 #endif
 
     register_all_cocos2dx_manual(m_state);
-#if CC_CCSTUDIO_ENABLED > 0
-    // Cocos Studio
-    tolua_CocoStudio_open(m_state);
-    register_all_cocos2dx_extension_manual(m_state);
-    register_all_cocos2dx_studio_manual(m_state);
-#endif
 
 #if CC_FILTERS_ENABLED > 0
     luaopen_ExtensionsFilters(m_state);
@@ -202,11 +186,6 @@ bool CCLuaStack::init(void)
 	luaopen_CZHelperFunc_luabinding(m_state);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     luaopen_cocos2dx_extra_ios_iap_luabinding(m_state);
-#endif
-
-#if CC_CURL_ENABLED > 0
-    // load assets manager
-    luaopen_ExtensionsAssetsManager(m_state);
 #endif
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
