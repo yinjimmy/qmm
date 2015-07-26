@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1971AD421B64CAFA00F294AF /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1971AD411B64CAFA00F294AF /* libluajit.a */; };
+		19E927F91B65405600FFE369 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 19E927F81B65405600FFE369 /* md5.c */; };
 		2EBAD92C1918BBDC00FF9BD6 /* CCBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD8E91918BBDC00FF9BD6 /* CCBlurFilter.cpp */; };
 		2EBAD92D1918BBDC00FF9BD6 /* CCBrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD8EB1918BBDC00FF9BD6 /* CCBrightnessFilter.cpp */; };
 		2EBAD92E1918BBDC00FF9BD6 /* CCContrastFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD8ED1918BBDC00FF9BD6 /* CCContrastFilter.cpp */; };
@@ -458,6 +459,7 @@
 		19DF56DE1B63EBD00040470E /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
 		19DF56DF1B63EBD00040470E /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
 		19DF56E11B63EBD00040470E /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
+		19E927F81B65405600FFE369 /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = md5.c; path = "../../../../../../../../../ac/repos/quick-mm/lib/cocos2d-x/external/extra/crypto/md5/md5.c"; sourceTree = "<group>"; };
 		2EBAD8E71918BBDC00FF9BD6 /* cocos2dFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocos2dFilters.h; sourceTree = "<group>"; };
 		2EBAD8E91918BBDC00FF9BD6 /* CCBlurFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlurFilter.cpp; sourceTree = "<group>"; };
 		2EBAD8EA1918BBDC00FF9BD6 /* CCBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlurFilter.h; sourceTree = "<group>"; };
@@ -1961,6 +1963,7 @@
 		F459E9FE180D04D8006CBDF1 /* md5 */ = {
 			isa = PBXGroup;
 			children = (
+				19E927F81B65405600FFE369 /* md5.c */,
 				F459EA00180D04D8006CBDF1 /* md5.h */,
 			);
 			path = md5;
@@ -4099,6 +4102,7 @@
 				F4D26ECB196321AE0087295D /* TriggerBase.cpp in Sources */,
 				F4E8833C177015FF00577406 /* CCEGLView.mm in Sources */,
 				F4E8833D177015FF00577406 /* CCES2Renderer.m in Sources */,
+				19E927F91B65405600FFE369 /* md5.c in Sources */,
 				F4D26EAF196321AE0087295D /* UICheckBox.cpp in Sources */,
 				F475E991199E116300CDEA69 /* CCGrooveJoint.cpp in Sources */,
 				F4D26E97196321AE0087295D /* CCColliderDetector.cpp in Sources */,
