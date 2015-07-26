@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1929919E1B63CB0D00B3D950 /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929919D1B63CB0D00B3D950 /* libluajit.a */; };
+		19AE56E41B64C92200B02FED /* libluajit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AE56E31B64C92200B02FED /* libluajit.a */; };
 		2EBA8456191B6A6E00256D60 /* CCBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA8410191B6A6E00256D60 /* CCBlurFilter.cpp */; };
 		2EBA8457191B6A6E00256D60 /* CCBrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA8412191B6A6E00256D60 /* CCBrightnessFilter.cpp */; };
 		2EBA8458191B6A6E00256D60 /* CCContrastFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA8414191B6A6E00256D60 /* CCContrastFilter.cpp */; };
@@ -440,18 +440,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		192991971B63CB0D00B3D950 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
-		192991981B63CB0D00B3D950 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
-		192991991B63CB0D00B3D950 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
-		1929919A1B63CB0D00B3D950 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
-		1929919B1B63CB0D00B3D950 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
-		1929919D1B63CB0D00B3D950 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
-		192991A91B63CB2E00B3D950 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
-		192991AA1B63CB2E00B3D950 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
-		192991AB1B63CB2E00B3D950 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
-		192991AC1B63CB2E00B3D950 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
-		192991AD1B63CB2E00B3D950 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
-		192991AF1B63CB2E00B3D950 /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libluajit.a; sourceTree = "<group>"; };
+		19AE55AA1B64C80F00B02FED /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		19AE55AB1B64C80F00B02FED /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		19AE55AC1B64C80F00B02FED /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		19AE55AD1B64C80F00B02FED /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		19AE55AE1B64C80F00B02FED /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		19AE56E11B64C8FD00B02FED /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = "../cocos2d-x/scripting/lua/luajit/ios/libluajit.a"; sourceTree = "<group>"; };
+		19AE56E31B64C92200B02FED /* libluajit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluajit.a; path = "../cocos2d-x/scripting/lua/luajit/mac/libluajit.a"; sourceTree = "<group>"; };
 		2EBA8303191B6A5700256D60 /* ExtensionExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionExport.h; sourceTree = "<group>"; };
 		2EBA840E191B6A6E00256D60 /* cocos2dFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocos2dFilters.h; sourceTree = "<group>"; };
 		2EBA8410191B6A6E00256D60 /* CCBlurFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCBlurFilter.cpp; sourceTree = "<group>"; };
@@ -1424,10 +1419,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AE56E41B64C92200B02FED /* libluajit.a in Frameworks */,
 				F45FF35416C7DE1F00275222 /* libcurl.dylib in Frameworks */,
 				F4DE082416800061005DB2DB /* Cocoa.framework in Frameworks */,
 				F41D98FC17F08B9E007171D8 /* libwebsockets.a in Frameworks */,
-				1929919E1B63CB0D00B3D950 /* libluajit.a in Frameworks */,
 				F4E880EE1770075400577406 /* libwebp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1435,72 +1430,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		192991871B63C65D00B3D950 /* luajit */ = {
+		19AE559C1B64C80F00B02FED /* luajit */ = {
 			isa = PBXGroup;
 			children = (
-				192991891B63C65D00B3D950 /* ios */,
-				192991931B63C65D00B3D950 /* mac */,
+				19AE55A91B64C80F00B02FED /* include */,
 			);
 			name = luajit;
-			path = "../../../../../../../../ac/repos/quick-mm/lib/cocos2d-x/scripting/lua/lua/luajit";
+			path = "../../../../../../../ac/repos/quick-mm/lib/cocos2d-x/scripting/lua/luajit";
 			sourceTree = "<group>";
 		};
-		192991891B63C65D00B3D950 /* ios */ = {
+		19AE55A91B64C80F00B02FED /* include */ = {
 			isa = PBXGroup;
 			children = (
-				192991A81B63CB2E00B3D950 /* include */,
-				192991AE1B63CB2E00B3D950 /* lib */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		192991931B63C65D00B3D950 /* mac */ = {
-			isa = PBXGroup;
-			children = (
-				192991961B63CB0D00B3D950 /* include */,
-				1929919C1B63CB0D00B3D950 /* lib */,
-			);
-			path = mac;
-			sourceTree = "<group>";
-		};
-		192991961B63CB0D00B3D950 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				192991971B63CB0D00B3D950 /* lauxlib.h */,
-				192991981B63CB0D00B3D950 /* lua.h */,
-				192991991B63CB0D00B3D950 /* lua.hpp */,
-				1929919A1B63CB0D00B3D950 /* luaconf.h */,
-				1929919B1B63CB0D00B3D950 /* lualib.h */,
+				19AE55AA1B64C80F00B02FED /* lauxlib.h */,
+				19AE55AB1B64C80F00B02FED /* lua.h */,
+				19AE55AC1B64C80F00B02FED /* lua.hpp */,
+				19AE55AD1B64C80F00B02FED /* luaconf.h */,
+				19AE55AE1B64C80F00B02FED /* lualib.h */,
 			);
 			path = include;
-			sourceTree = "<group>";
-		};
-		1929919C1B63CB0D00B3D950 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				1929919D1B63CB0D00B3D950 /* libluajit.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		192991A81B63CB2E00B3D950 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				192991A91B63CB2E00B3D950 /* lauxlib.h */,
-				192991AA1B63CB2E00B3D950 /* lua.h */,
-				192991AB1B63CB2E00B3D950 /* lua.hpp */,
-				192991AC1B63CB2E00B3D950 /* luaconf.h */,
-				192991AD1B63CB2E00B3D950 /* lualib.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		192991AE1B63CB2E00B3D950 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				192991AF1B63CB2E00B3D950 /* libluajit.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		2EBA840D191B6A6E00256D60 /* filters */ = {
@@ -1782,14 +1730,6 @@
 			);
 			name = factories;
 			path = DragonBones/factories;
-			sourceTree = "<group>";
-		};
-		F40019231A231A20003D323B /* lua */ = {
-			isa = PBXGroup;
-			children = (
-				192991871B63C65D00B3D950 /* luajit */,
-			);
-			path = lua;
 			sourceTree = "<group>";
 		};
 		F412715D19F75816005E6CD0 /* CocoStudio */ = {
@@ -2794,6 +2734,8 @@
 		F4DE082216800061005DB2DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19AE56E31B64C92200B02FED /* libluajit.a */,
+				19AE56E11B64C8FD00B02FED /* libluajit.a */,
 				F4DE082316800061005DB2DB /* Cocoa.framework */,
 				F45FF35316C7DE1F00275222 /* libcurl.dylib */,
 			);
@@ -2909,8 +2851,8 @@
 		F4DE0AB116800248005DB2DB /* lua */ = {
 			isa = PBXGroup;
 			children = (
+				19AE559C1B64C80F00B02FED /* luajit */,
 				F4DE0AB216800261005DB2DB /* cocos2dx_support */,
-				F40019231A231A20003D323B /* lua */,
 				F4CB8743180D02F600D81CF3 /* lua_extensions */,
 				F4DE0AF416800261005DB2DB /* tolua */,
 			);
@@ -4244,11 +4186,11 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/cocos2dx/platform/third_party/mac/libraries\"",
-					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/luajit/mac/lib\"",
+					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/luajit/mac\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/external/libwebsockets/mac/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-lluajit";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
@@ -4307,11 +4249,11 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/cocos2dx/platform/third_party/mac/libraries\"",
-					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/lua/luajit/mac/lib\"",
+					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/luajit/mac\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/external/libwebsockets/mac/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-lluajit";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
