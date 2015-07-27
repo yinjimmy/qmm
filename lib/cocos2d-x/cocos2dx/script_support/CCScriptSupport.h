@@ -160,11 +160,6 @@ public:
      */
     virtual int executeNodeEnterFrameEvent(CCNode* pNode, float dt) = 0;
 
-    /**
-     CCMenuItem Event
-     */
-    virtual int executeMenuItemEvent(CCMenuItem* pMenuItem) = 0;
-
     /** Execute a notification event function */
     virtual int executeNotificationEvent(CCNotificationCenter* pNotificationCenter, const char* pszName, CCObject *obj = NULL) = 0;
 

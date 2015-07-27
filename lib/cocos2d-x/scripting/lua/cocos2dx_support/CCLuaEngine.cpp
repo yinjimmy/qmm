@@ -159,22 +159,6 @@ int CCLuaEngine::executeNodeEnterFrameEvent(CCNode* pNode, float dt)
     return 0;
 }
 
-int CCLuaEngine::executeMenuItemEvent(CCMenuItem* pMenuItem)
-{
-    CCArray *listeners = pMenuItem->getAllScriptEventListeners();
-    CCScriptHandlePair *p;
-    for (int i = listeners->count() - 1; i >= 0; --i)
-    {
-        p = dynamic_cast<CCScriptHandlePair*>(listeners->objectAtIndex(i));
-        if (p->event != MENU_ITEM_CLICKED_EVENT || p->removed) continue;
-        m_stack->pushInt(pMenuItem->getTag());
-        m_stack->pushCCObject(pMenuItem, "CCMenuItem");
-        m_stack->executeFunctionByHandler(p->listener, 2);
-        m_stack->clean();
-    }
-    return 0;
-}
-
 int CCLuaEngine::executeNotificationEvent(CCNotificationCenter* pNotificationCenter, const char* pszName, CCObject *obj /* = NULL */)
 {
     int nHandler = pNotificationCenter->getObserverHandlerByName(pszName);

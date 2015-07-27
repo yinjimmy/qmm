@@ -80,12 +80,6 @@ LOCAL_SRC_FILES += \
     ../cocos2dx_support/LuaCocos2dAssetsManager.cpp
 endif
 
-ifeq ($(CC_CCB_ENABLED),1)
-LOCAL_SRC_FILES += \
-    ../cocos2dx_support/CCBProxy.cpp \
-    ../cocos2dx_support/Lua_extensions_CCB.cpp
-endif
-
 ifeq ($(CC_CCSTUDIO_ENABLED),1)
 LOCAL_SRC_FILES += \
     ../cocos2dx_support/lua_cocos2dx_extensions_manual.cpp

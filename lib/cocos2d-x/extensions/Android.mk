@@ -25,7 +25,6 @@ LOCAL_SRC_FILES := \
     GUI/CCScrollView/CCSorting.cpp \
     GUI/CCScrollView/CCTableView.cpp \
     GUI/CCScrollView/CCTableViewCell.cpp \
-    CCBReader/CCData.cpp \
     network/WebSocket.cpp
 
 ifeq ($(CC_DRAGONBONES_ENABLED),1)
@@ -84,33 +83,6 @@ LOCAL_SRC_FILES += \
     filters/shaders/ccFilterShaders.cpp
 endif
 
-ifeq ($(CC_CCB_ENABLED),1)
-LOCAL_SRC_FILES += \
-    CCBReader/CCBAnimationManager.cpp \
-    CCBReader/CCBFileLoader.cpp \
-    CCBReader/CCBKeyframe.cpp \
-    CCBReader/CCBReader.cpp \
-    CCBReader/CCBSequence.cpp \
-    CCBReader/CCBSequenceProperty.cpp \
-    CCBReader/CCBValue.cpp \
-    CCBReader/CCControlButtonLoader.cpp \
-    CCBReader/CCControlLoader.cpp \
-    CCBReader/CCLabelBMFontLoader.cpp \
-    CCBReader/CCLabelTTFLoader.cpp \
-    CCBReader/CCLayerColorLoader.cpp \
-    CCBReader/CCLayerGradientLoader.cpp \
-    CCBReader/CCLayerLoader.cpp \
-    CCBReader/CCMenuItemImageLoader.cpp \
-    CCBReader/CCMenuItemLoader.cpp \
-    CCBReader/CCNode+CCBRelativePositioning.cpp \
-    CCBReader/CCNodeLoader.cpp \
-    CCBReader/CCNodeLoaderLibrary.cpp \
-    CCBReader/CCParticleSystemQuadLoader.cpp \
-    CCBReader/CCScale9SpriteLoader.cpp \
-    CCBReader/CCScrollViewLoader.cpp \
-    CCBReader/CCSpriteLoader.cpp
-endif
-
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_lua_static
@@ -131,7 +103,6 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                            $(LOCAL_PATH)/GUI/CCEditBox \
                            $(LOCAL_PATH)/ProjectConfig \
                            $(LOCAL_PATH)/network \
-                           $(LOCAL_PATH)/CCBReader \
                            $(LOCAL_PATH)/Components \
                            $(LOCAL_PATH)/GUI/CCScrollView \
                            $(LOCAL_PATH)/CCArmature \

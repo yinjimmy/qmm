@@ -61,7 +61,6 @@ require(p .. "LayerEx")
 require(p .. "SceneEx")
 require(p .. "SpriteEx")
 require(p .. "DrawNodeEx")
-require(p .. "MenuItemEx")
 if cc.DragonBonesNode and AnimationEvent then
 	require(p .. "DragonBonesEx")
 end

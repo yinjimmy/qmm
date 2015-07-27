@@ -115,7 +115,6 @@ public:
 
     virtual int executeNodeEvent(CCNode* pNode, int nAction);
     virtual int executeNodeEnterFrameEvent(CCNode* pNode, float dt);
-    virtual int executeMenuItemEvent(CCMenuItem* pMenuItem);
     virtual int executeNotificationEvent(CCNotificationCenter* pNotificationCenter, const char* pszName, CCObject *obj = NULL);
     virtual int executeCallFuncActionEvent(CCCallFunc* pAction, CCObject* pTarget = NULL);
     virtual int executeSchedule(int nHandler, float dt, CCNode* pNode = NULL);

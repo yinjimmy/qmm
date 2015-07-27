@@ -44,12 +44,6 @@ LOCAL_SRC_FILES := ../cocos2dx_support/CCLuaEngine.cpp \
     ../lua_extensions/lpack/lpack.c \
     ../lua_extensions/lua_extensions.c
 
-ifeq ($(CC_CCB_ENABLED),1)
-LOCAL_SRC_FILES += \
-    ../cocos2dx_support/CCBProxy.cpp \
-    ../cocos2dx_support/Lua_extensions_CCB.cpp
-endif
-
 LOCAL_SRC_FILES += \
     ../cocos2dx_support/lua_cocos2dx_extensions_manual.cpp \
     ../cocos2dx_support/lua_cocos2dx_manual.cpp

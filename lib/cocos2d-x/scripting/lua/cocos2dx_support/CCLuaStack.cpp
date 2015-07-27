@@ -50,14 +50,9 @@ extern "C" {
 // cocos2d-x luabinding
 #include "LuaCocos2d.h"
 
-#if CC_PHYSICS_ENABLED > 0
 // chipmunk
+#if CC_PHYSICS_ENABLED > 0
 #include "CCPhysicsWorld_luabinding.h"
-#endif
-
-#if CC_CCB_ENABLED > 0
-// CCB
-#include "Lua_extensions_CCB.h"
 #endif
 
 #include "lua_cocos2dx_manual.h"
@@ -138,11 +133,6 @@ bool CCLuaStack::init(void)
     luaL_openlibs(m_state);
     toluafix_open(m_state);
     tolua_Cocos2d_open(m_state);
-
-#if CC_CCB_ENABLED > 0
-    // CCB
-    tolua_extensions_ccb_open(m_state);
-#endif
 
     register_all_cocos2dx_manual(m_state);
 
