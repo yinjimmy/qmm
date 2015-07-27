@@ -213,16 +213,6 @@ c.TransitionProgressVertical   = CCTransitionProgressVertical
 c.TransitionProgressInOut      = CCTransitionProgressInOut
 c.TransitionProgressOutIn      = CCTransitionProgressOutIn
 
--- menu nodes
-c.Menu                         = CCMenu
-c.MenuItem                     = CCMenuItem
-c.MenuItemLabel                = CCMenuItemLabel
-c.MenuItemAtlasFont            = CCMenuItemAtlasFont
-c.MenuItemFont                 = CCMenuItemFont
-c.MenuItemSprite               = CCMenuItemSprite
-c.MenuItemImage                = CCMenuItemImage
-c.MenuItemToggle               = CCMenuItemToggle
-
 -- misc nodes
 c.ClippingNode                 = CCClippingNode
 c.ClippingRegionNode           = CCClippingRegionNode
