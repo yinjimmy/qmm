@@ -22,7 +22,7 @@ function SampleScene:ctor()
 end
 
 function SampleScene:createLogo()
-    cc.ui.UIPushButton.new("LogoBanner.png")
+    cc.ui.UIPushButton("LogoBanner.png")
         :onButtonClicked(function()
             CCNotificationCenter:sharedNotificationCenter():postNotification("WELCOME_APP")
         end)
@@ -59,7 +59,7 @@ function SampleScene:createPageView()
 
     local pageCount = math.ceil(sampleCount / maxNum)
 
-    self.pv = cc.ui.UIPageView.new {
+    self.pv = cc.ui.UIPageView {
             viewRect = cc.rect(40, 40, display.width - 80, display.height - 50),
             column = 4, row = 3,
             padding = {left = 0, right = 20, top = 20, bottom = 0},
@@ -83,7 +83,7 @@ function SampleScene:createPageView()
                     local item = self.pv:newItem()
                     local content = display.newNode()
 
-                    cc.ui.UILabel.new({text = sample.description, size = 12, color = ccc3(50,144,144)})
+                    cc.ui.UILabel({text = sample.description, size = 12, color = ccc3(50,144,144)})
                         :align(display.CENTER)
                         :pos(imageWidth/2, 150)
                         :addTo(content)

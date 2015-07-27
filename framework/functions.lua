@@ -304,6 +304,13 @@ function class(classname, super)
         cls.__cname = classname
         cls.__ctype = 1
 
+        -- make xx() instead of .new()
+        cls.__call  = function ( t,... )
+            return t.new(...)
+        end
+        setmetatable(cls,cls)
+
+
         function cls.new(...)
             local instance = cls.__create(...)
             -- copy fields from class to native object
