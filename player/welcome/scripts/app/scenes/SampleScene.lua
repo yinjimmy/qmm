@@ -4,16 +4,8 @@ local SampleScene = class("SampleScene", function()
 end)
 
 function SampleScene:ctor()
-    self.ccs = {}
-    self.ccs.TouchEventType =
-    {
-        began = 0,
-        moved = 1,
-        ended = 2,
-        canceled = 3,
-    }
-    self.samples     = dofile(__G__QUICK_PATH__ .. "/samples/samples.lua")
-    local bg         = CCLayerColor:create(ccc4(255, 255, 255, 255))
+    self.samples = dofile(__G__QUICK_PATH__ .. "/samples/samples.lua")
+    local bg     = display.newColorLayer(ccc4(255, 255, 255, 255))
     self:addChild(bg)
 
     self:createLogo()
