@@ -699,23 +699,22 @@ void CCFileUtils::setSearchPaths(const std::vector<std::string>& searchPaths)
     m_searchPathArray.clear();
     m_searchPathArray.assign(searchPaths.begin(), searchPaths.end());
     updateSearchPathArrayCheck();
-        }
-    
+}
+
 void CCFileUtils::setSearchRootPath(const char* path)
-    {
+{
     m_fullPathCache.clear();
     m_strDefaultResRootPath = path ? path : "";
     updateSearchPathArrayCheck();
-    }
+}
 
 void CCFileUtils::addSearchPath(const char* path)
 {
-    if (path && strlen(path) > 0)
-    {
+    if (!path || (strlen(path) <= 0) || isPathInSearchPath(path)) return;
+    
     m_searchPathArray.push_back(path);
-        updateSearchPathArrayCheck();
+    updateSearchPathArrayCheck();
 }
-	}
 
 void CCFileUtils::setFilenameLookupDictionary(CCDictionary* pFilenameLookupDict)
 {
@@ -816,6 +815,14 @@ void CCFileUtils::updateSearchPathArrayCheck(void)
     {
         m_searchPathArrayCheck.push_back(m_strDefaultResRootPath);
     }
+}
+
+bool CCFileUtils::isPathInSearchPath(const std::string &path)
+{
+    return (std::find(m_searchPathArray.begin(),
+                      m_searchPathArray.end(),
+                      path)
+            != m_searchPathArray.end());
 }
 
 NS_CC_END

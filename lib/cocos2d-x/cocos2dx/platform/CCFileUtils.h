@@ -408,6 +408,10 @@ protected:
     
     void updateSearchPathArrayCheck(void);
     
+    /**
+     */
+    bool isPathInSearchPath(const std::string& path);
+    
     /** Dictionary used to lookup filenames based on a key.
      *  It is used internally by the following methods:
      *
