@@ -8,8 +8,8 @@ local UIPageView = class("UIPageView", function()
 	return node
 end)
 
-UIPageView.EV_CLICKED    = "clicked"
-UIPageView.EV_PAGECHANGE = "pageChange"
+UIPageView.EVT_CLICKED    = "clicked"
+UIPageView.EVT_PAGECHANGE = "pageChange"
 
 function UIPageView:ctor(params)
 	self.items_ = {}
@@ -93,7 +93,7 @@ function UIPageView:gotoPage(pageIdx, bSmooth, bLeftToRight)
 		-- 		item = self.items_[clickIdx],
 		-- 		itemIdx = clickIdx,
 		-- 		pageIdx = self.curPageIdx_}
-		self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+		self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 	end
 
 	return self
@@ -299,7 +299,7 @@ function UIPageView:scrollPagePos(pos, bLeftToRight)
 						end
 						self.curPageIdx_ = pageIdx
 						self:disablePage()
-						self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+						self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 					end})
 end
 
@@ -425,7 +425,7 @@ function UIPageView:scrollAuto()
 				onComplete = function()
 					self.curPageIdx_ = self:getNextPageIndex(false)
 					self:disablePage()
-					self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+					self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 				end})
 			transition.moveTo(pageL,
 				{x = self.viewRect_.x, y = posY, time = 0.3})
@@ -434,7 +434,7 @@ function UIPageView:scrollAuto()
 				{x = self.viewRect_.x, y = posY, time = 0.3,
 				onComplete = function()
 					self:disablePage()
-					self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+					self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 				end})
 			if pageL then
 				transition.moveTo(pageL,
@@ -448,7 +448,7 @@ function UIPageView:scrollAuto()
 				onComplete = function()
 					self.curPageIdx_ = self:getNextPageIndex(true)
 					self:disablePage()
-					self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+					self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 				end})
 			transition.moveTo(pageR,
 				{x = self.viewRect_.x, y = posY, time = 0.3})
@@ -457,7 +457,7 @@ function UIPageView:scrollAuto()
 				{x = self.viewRect_.x, y = posY, time = 0.3,
 				onComplete = function()
 					self:disablePage()
-					self:notifyListener_{name = UIPageView.EV_PAGECHANGE}
+					self:notifyListener_{name = UIPageView.EVT_PAGECHANGE}
 				end})
 			if pageR then
 				transition.moveTo(pageR,
@@ -496,7 +496,7 @@ function UIPageView:onClick_(event)
 		end
 	end
 
-	self:notifyListener_{name = UIPageView.EV_CLICKED,
+	self:notifyListener_{name = UIPageView.EVT_CLICKED,
 		item = self.items_[clickIdx],
 		itemIdx = clickIdx}
 end

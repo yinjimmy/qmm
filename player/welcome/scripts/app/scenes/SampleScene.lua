@@ -57,7 +57,7 @@ function SampleScene:createPageView()
             padding = {left = 0, right = 20, top = 20, bottom = 0},
             columnSpace = 30, rowSapce = 10}
         :onTouch(function ( event )
-            if event.name == cc.ui.UIPageView.EV_CLICKED then
+            if event.name == cc.ui.UIPageView.EVT_CLICKED then
                 local sampleIndex = 12 * (event.pageIdx - 1) + event.itemIdx
                 self:onSampleClicked(self.samples[sampleIndex])
             end
