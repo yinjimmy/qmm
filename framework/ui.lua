@@ -496,4 +496,135 @@ function ui.createOutline(node,outlineWidth,color,opacity,src,dst)
     return rt
 end
 
+--[[--
+
+    ui.newMenu({
+        ui.newTTFLabelMenuItem({}),
+        ui.newImageMenuItem({}),
+    })
+
+@param table
+@return node
+]]
+function ui.newMenu(params)
+    assert(type(params) == "table",
+           "[framework.ui] newMenu() invalid params")
+
+    local node = display.newNode()
+    for _,item in ipairs(params) do
+        node:addChild(item)
+    end
+
+    function node:setEnabled( yes )
+        -- TODO:
+        self.isEnabled_ = yes
+    end
+    function node:isEnabled()
+        return self.isEnabled_
+    end
+    function node:alignItemsVertically(margin)
+        -- check first
+        local childCount = self:getChildrenCount()
+        if childCount < 1 then
+            return
+        end
+
+        local margin      = margin or 10
+        local children    = self:getChildren()
+        local y           = 0
+        if type(children) == "table" then
+            for i = 1, childCount do
+                local node = children[i]
+                node:pos(0, y)
+                y = y + node:getContentSize().height
+            end
+        elseif type(children) == "userdata" then
+            for i = 1, childCount do
+                local node = children:objectAtIndex(i - 1)
+                node:pos(0, y)
+                y = y + node:getContentSize().height
+            end
+        end
+    end
+
+    return node
+end
+
+--[[--
+
+ui.newTTFLabelMenuItem({text="Compare lpack and ByteArray", size=32, listener=handler(self, self._onTest1)})
+
+@param table params 参数表格对象
+
+@return node
+]]
+function ui.newTTFLabelMenuItem(params)
+    assert(type(params) == "table", "[framework.ui] newTTFLabelMenuItem invalid params")
+    local label = cc.ui.UILabel(params)
+    label:setTouchEnabled(true)
+
+    if params.x ~= nil then label:setPositionX(params.x) end
+    if params.y ~= nil then label:setPositionY(params.y) end
+    if params.align == nil then
+        label:align(display.CENTER)
+    end
+    label:addNodeEventListener(cc.NODE_TOUCH_EVENT, function ( event )
+        if event.name == "began" then
+            if params.listener ~= nil then params.listener() end
+            if params.sound ~= nil then audio.playSound(params.sound) end
+        end
+    end)
+
+    return label
+end
+
+--[[--
+
+ui.newImageMenuItem({
+        image = "#BackButton.png",
+        imageSelected = "#BackButtonSelected.png",
+        x = display.right - 100,
+        y = display.bottom + 120,
+        sound = GAME_SFX.backButton,
+        listener = function()
+            app:enterChooseLevelScene()
+        end,
+    })
+
+@param table
+@return sprite
+]]
+
+function ui.newImageMenuItem( params )
+    assert(type(params) == "table", "[framework.ui] newImageMenuItem invalid params")
+
+    local spr = display.newSprite(params.image)
+    spr:setTouchEnabled(true)
+    spr:addNodeEventListener(cc.NODE_TOUCH_EVENT, function ( event )
+        if event.name == "began" then
+            if params.imageSelected ~= nil then
+                local filename = params.imageSelected
+                if string.byte(filename) == 35 then
+                    local frameNo = display.newSpriteFrame(string.sub(filename, 2))
+                    spr:setDisplayFrame(frameNo)
+                end
+
+            end
+            if params.listener ~= nil then
+                params.listener()
+            end
+            if params.sound ~= nil then
+                audio.playSound(params.sound)
+            end
+        elseif event.name == "ended" or event.name == "cancelled" then
+            local frameNo = display.newSpriteFrame(params.image)
+            spr:setDisplayFrame(frameNo)
+        end
+    end)
+
+    if params.x ~= nil then spr:setPositionX(params.x) end
+    if params.y ~= nil then spr:setPositionY(params.y) end
+    return spr
+end
+
 return ui
