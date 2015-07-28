@@ -75,11 +75,6 @@ LOCAL_SRC_FILES := ../cocos2dx_support/CCLuaEngine.cpp \
     ../lua/lua-5.1.5/src/lzio.c \
     ../lua/lua-5.1.5/src/print.c
 
-ifeq ($(CC_CURL_ENABLED),1)
-LOCAL_SRC_FILES += \
-    ../cocos2dx_support/LuaCocos2dAssetsManager.cpp
-endif
-
 ifeq ($(CC_CCB_ENABLED),1)
 LOCAL_SRC_FILES += \
     ../cocos2dx_support/CCBProxy.cpp \
