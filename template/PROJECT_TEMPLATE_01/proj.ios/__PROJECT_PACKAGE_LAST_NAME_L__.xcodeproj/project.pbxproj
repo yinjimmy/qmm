@@ -19,6 +19,7 @@
 		2EDD2799191B639C004F9539 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD2794191B639C004F9539 /* AppController.mm */; };
 		2EDD279A191B639C004F9539 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD2795191B639C004F9539 /* main.m */; };
 		2EDD279B191B639C004F9539 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD2798191B639C004F9539 /* RootViewController.mm */; };
+		9F8275AB1B67762C00AE6009 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10615EE0D3500FCF3E2 /* Security.framework */; };
 		F4323CF716D3298E0072B773 /* libquickcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48F590816D21F8C000651BE /* libquickcocos2dx.a */; };
 		F452BFC51687EEF900DC5BCC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFC41687EEF900DC5BCC /* CoreText.framework */; };
 		F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFCF1687F0F200DC5BCC /* UIKit.framework */; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8275AB1B67762C00AE6009 /* Security.framework in Frameworks */,
 				F4323CF716D3298E0072B773 /* libquickcocos2dx.a in Frameworks */,
 				F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */,
 				F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */,
@@ -465,6 +467,17 @@
 					"-lz",
 					"-ObjC",
 				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(_COCOS_LIB_IOS_BEGIN)",
+					"$(_COCOS_LIB_IOS_END)",
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+					"-lxml2",
+					"-lz",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -530,6 +543,17 @@
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/luajit/ios\"",
 				);
 				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lz",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=x86_64]" = (
+					"$(_COCOS_LIB_IOS_BEGIN)",
+					"$(_COCOS_LIB_IOS_END)",
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
 					"-lxml2",
 					"-lz",
 					"-ObjC",

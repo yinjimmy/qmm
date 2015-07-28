@@ -69,6 +69,7 @@ enum {
 #define kCCNodeOnEnterTransitionDidFinish   2
 #define kCCNodeOnExitTransitionDidStart     3
 #define kCCNodeOnCleanup                    4
+#define kCCNodeOnDestroy                    5
 
 #define kCCTouchesAllAtOnce                 0
 #define kCCTouchesOneByOne                  1

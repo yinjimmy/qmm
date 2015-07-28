@@ -99,6 +99,9 @@ int CCLuaEngine::executeGlobalFunction(const char* functionName, int numArgs /* 
 
 int CCLuaEngine::executeNodeEvent(CCNode* pNode, int nAction)
 {
+    CCArray *listeners = pNode->getAllScriptEventListeners();
+    if (!listeners) return 0;
+    
     CCLuaValueDict event;
     switch (nAction)
     {
@@ -122,6 +125,10 @@ int CCLuaEngine::executeNodeEvent(CCNode* pNode, int nAction)
             event["name"] = CCLuaValue::stringValue("cleanup");
             break;
 
+        case kCCNodeOnDestroy:
+            event["name"] = CCLuaValue::stringValue("destroy");
+            break;
+            
         default:
             return 0;
     }
@@ -129,7 +136,6 @@ int CCLuaEngine::executeNodeEvent(CCNode* pNode, int nAction)
     m_stack->clean();
     m_stack->pushCCLuaValueDict(event);
 
-    CCArray *listeners = pNode->getAllScriptEventListeners();
     CCScriptHandlePair *p;
     for (int i = listeners->count() - 1; i >= 0; --i)
     {
