@@ -71,6 +71,9 @@ end
 function Node:onCleanup()
 end
 
+function Node:onDestroy()
+end
+
 function Node:setNodeEventEnabled(enabled, listener)
     if enabled then
         if self.__node_event_handle__ then
@@ -91,6 +94,8 @@ function Node:setNodeEventEnabled(enabled, listener)
                     self:onExitTransitionStart()
                 elseif name == "cleanup" then
                     self:onCleanup()
+                elseif name == "destroy" then
+                    self:onDestroy()
                 end
             end
         end
