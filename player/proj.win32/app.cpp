@@ -83,8 +83,8 @@ QuickXPlayer::QuickXPlayer(void)
 
 int QuickXPlayer::run(void)
 {
-    const char *QUICK_COCOS2DX_ROOT = getenv("QUICK_COCOS2DX_ROOT");
-    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QUICK_COCOS2DX_ROOT);
+    const char *QMM_ROOT = getenv("QMM_ROOT");
+    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QMM_ROOT);
 
     loadProjectConfig();
     if (!m_project.getProjectDir().length())
@@ -447,7 +447,7 @@ void QuickXPlayer::relaunch(void)
 CCLuaValueArray QuickXPlayer::getOpenRecentsForLua(void)
 {
     CCLuaValueArray ret;
-    
+
     CRegistry *reg = new CRegistry(HKEY_CURRENT_USER, "quick-x\\quick-x-player\\recents");
     string countString;
     reg->ReadStringValue(countString);

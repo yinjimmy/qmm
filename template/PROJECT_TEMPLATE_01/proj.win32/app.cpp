@@ -78,8 +78,8 @@ App::App(void)
 
 int App::run(void)
 {
-    const char *QUICK_COCOS2DX_ROOT = getenv("QUICK_COCOS2DX_ROOT");
-    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QUICK_COCOS2DX_ROOT);
+    const char *QMM_ROOT = getenv("QMM_ROOT");
+    SimulatorConfig::sharedDefaults()->setQuickCocos2dxRootPath(QMM_ROOT);
 
     loadProjectConfig();
 

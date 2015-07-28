@@ -109,7 +109,7 @@ function MainScene:show()
             -- 注意这里的第二个参数 友盟原生要求传入map<string,string>
             -- 在lua中改为传字串，它的格式为 “k,v” 或 “k,v|k,v”
             -- 同时因为第二个参数类型的改变，会造成与普通事件的event函数有二义性，所以名字与原生也有变动
-            -- 详情可参见$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_analytics/include/MobClickCppForLua.h
+            -- 详情可参见$QMM_ROOT/lib/sdk/umeng_analytics/include/MobClickCppForLua.h
             local attributes = "type,book|quantity,3"
             cc.analytics:doCommand{command = "eventCustom",
                     args = {eventId = "purchase", attributes = attributes}}

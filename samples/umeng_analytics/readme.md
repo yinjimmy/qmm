@@ -8,7 +8,7 @@
 
 ### 拷贝文件 ###
 
-$(QUICK_COCOS2DX_ROOT)/lib/sdk/umeng_analytics/include中的
+$(QMM_ROOT)/lib/sdk/umeng_analytics/include中的
 * MobClickCpp.h
 * MobClickCppForLua_luabinding.cpp
 * MobClickCppForLua_luabinding.h
@@ -20,26 +20,26 @@ $(QUICK_COCOS2DX_ROOT)/lib/sdk/umeng_analytics/include中的
 
 ### IOS相关 ###
 
-	1. 拷贝$(QUICK_COCOS2DX_ROOT)/lib/sdk/umeng_analytics/umeng_analytics_ios/libMobClickCppWithLibCpp.a到工程中proj.ios/sdk/umeng_analytics_ios/中
-	
+	1. 拷贝$(QMM_ROOT)/lib/sdk/umeng_analytics/umeng_analytics_ios/libMobClickCppWithLibCpp.a到工程中proj.ios/sdk/umeng_analytics_ios/中
+
 	2. 并把步骤1中的五个源文件加到xcode工程源文件中
 
 ### android相关 ###
 
-	1. 拷贝$(QUICK_COCOS2DX_ROOT)/lib/sdk/umeng_analytics/umeng_analytics_android/* 到工程中proj.android/中
-	
+	1. 拷贝$(QMM_ROOT)/lib/sdk/umeng_analytics/umeng_analytics_android/* 到工程中proj.android/中
+
 	2. 修改proj.android/jni/Android.mk，
-	
+
 	3. 在Android.mk中加入
 	LOCAL_SRC_FILES :=
     	../../sources/MobClickCppForLua_luabinding.cpp \
     	../../sources/MobClickCppForLua.cpp
 	LOCAL_LDLIBS := $(LOCAL_PATH)/../libs/cocos2dx2_libMobClickCpp.a
-	
+
 	4. 修改proj.android/jni/helloCpp/main.cpp, 在其中的JNI_OnLoad函数中加入
 	MobClickCpp::initJniForCocos2dx2((void*)vm,
 	"此处填写上一步修改的activity的名字 如org/cocos2d_x/samples/umeng_analytics/Umeng_analytics");
-	
+
 	5. 修改游戏中主activity，见样例中的Umeng_analytics
 
 ### android,ios都有 ###

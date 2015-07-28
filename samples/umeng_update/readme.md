@@ -6,13 +6,13 @@
 
 #### 工程说明 ####
 * *工程依赖源代码位置*:
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_update/umeng_update_android/umeng_update_android
+$QMM_ROOT/lib/sdk/umeng_update/umeng_update_android/umeng_update_android
 
 * *工程依赖库位置*:
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_update/umeng_update_android/libs
+$QMM_ROOT/lib/sdk/umeng_update/umeng_update_android/libs
 
 * *工程依赖库位置*:
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_update/umeng_update_android/res
+$QMM_ROOT/lib/sdk/umeng_update/umeng_update_android/res
 
 * *SDK版本*
 

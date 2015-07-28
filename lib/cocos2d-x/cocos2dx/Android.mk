@@ -164,7 +164,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/include \
                     $(LOCAL_PATH)/kazmath/include \
                     $(LOCAL_PATH)/platform/android \
-$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/external/extra
+$(QMM_ROOT)/lib/cocos2d-x/external/extra
 
 LOCAL_EXPORT_LDLIBS := -lGLESv2 \
                        -llog \

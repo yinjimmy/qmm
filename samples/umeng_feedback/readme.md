@@ -2,13 +2,13 @@
 ### android工程注意事项 ###
 
 * **工程依赖源代码位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/umeng_feedback_android
+$QMM_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/umeng_feedback_android
 
 * **工程依赖库位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/libs/*
+$QMM_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/libs/*
 
 * **工程依赖资源位置**
-android的资源文件在$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/res/*
+android的资源文件在$QMM_ROOT/lib/sdk/umeng_feedback/umeng_feedback_android/res/*
 
 **lib**, **res**请拷到工程对应目录下
 
@@ -19,7 +19,7 @@ android的资源文件在$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_feedb
 
 ### ios工程注意事项 ###
 * **工程依赖源代码位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_feedback_ios/*
+$QMM_ROOT/lib/sdk/umeng_feedback/umeng_feedback_ios/*
 
 * *SDK版本*
 

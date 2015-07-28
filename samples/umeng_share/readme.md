@@ -2,10 +2,10 @@
 ### android工程注意事项 ###
 
 * **工程依赖源代码位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_share/umeng_share_android/umeng_share_android
+$QMM_ROOT/lib/sdk/umeng_share/umeng_share_android/umeng_share_android
 
 * **工程依赖库位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_share/umeng_share_android/social_sdk_library_project
+$QMM_ROOT/lib/sdk/umeng_share/umeng_share_android/social_sdk_library_project
 
 * **集成版本**
 
@@ -14,7 +14,7 @@ $QUICK_COCOS2DX_ROOT/lib/sdk/umeng_share/umeng_share_android/social_sdk_library_
 ### ios工程注意事项 ###
 
 * **工程依赖源代码位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_feedback/umeng_share_ios/*
+$QMM_ROOT/lib/sdk/umeng_feedback/umeng_share_ios/*
 
 * **集成版本**
 

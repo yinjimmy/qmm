@@ -65,9 +65,9 @@ using namespace cocos2d::extra;
     hasPopupDialog = NO;
     debugLogFile = 0;
 
-    // load QUICK_COCOS2DX_ROOT from ~/.QUICK_COCOS2DX_ROOT
+    // load QMM_ROOT from ~/.QMM_ROOT
     NSMutableString *path = [NSMutableString stringWithString:NSHomeDirectory()];
-    [path appendString:@"/.QUICK_COCOS2DX_ROOT"];
+    [path appendString:@"/.QMM_ROOT"];
     NSError *error = nil;
     NSString *env = [NSString stringWithContentsOfFile:path
                                               encoding:NSUTF8StringEncoding
@@ -214,7 +214,7 @@ using namespace cocos2d::extra;
     CCNotificationCenter::sharedNotificationCenter()->addObserver(bridge, callfuncO_selector(AppControllerBridge::onWelcomeGetStarted), "WELCOME_OPEN_DOCUMENTS", NULL);
     CCNotificationCenter::sharedNotificationCenter()->addObserver(bridge, callfuncO_selector(AppControllerBridge::onWelcomeGetCommunity), "WELCOME_OPEN_COMMUNITY", NULL);
     CCNotificationCenter::sharedNotificationCenter()->addObserver(bridge, callfuncO_selector(AppControllerBridge::onWelcomeOpenRecent), "WELCOME_OPEN_PROJECT_ARGS", NULL);
-    
+
     // send recent to Lua
     CCLuaValueArray titleArray;
     NSArray *recents = [[NSUserDefaults standardUserDefaults] arrayForKey:@"recents"];
@@ -224,7 +224,7 @@ using namespace cocos2d::extra;
         titleArray.push_back(CCLuaValue::stringValue([[recentItem objectForKey:@"title"] UTF8String]));
     }
     app->setOpenRecents(titleArray);
-    
+
     app->setProjectConfig(projectConfig);
     app->run();
 }
@@ -574,12 +574,12 @@ using namespace cocos2d::extra;
         NSString *data = [NSString stringWithUTF8String:stringData->getCString()];
         [self relaunch:[data componentsSeparatedByString:@","]];
     }
-    
+
     cocos2d::CCInteger *intData = dynamic_cast<cocos2d::CCInteger*>(object);
     if (intData)
     {
         int index = intData->getValue();
-        
+
         NSArray *recents = [[NSUserDefaults standardUserDefaults] objectForKey:@"recents"];
         if (index < recents.count)
         {

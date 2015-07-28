@@ -2,10 +2,10 @@
 ### android工程注意事项 ###
 
 * *工程依赖源代码位置*
-$QUICK_COCOS2DX_ROOT/lib/sdk/punchbox_ad/punchbox_ad_android/punchbox_ad_android
+$QMM_ROOT/lib/sdk/punchbox_ad/punchbox_ad_android/punchbox_ad_android
 
 * *工程依赖库位置*
-$QUICK_COCOS2DX_ROOT/lib/sdk/punchbox_ad/punchbox_ad_android/libs
+$QMM_ROOT/lib/sdk/punchbox_ad/punchbox_ad_android/libs
 
 * *SDK版本*
 
@@ -15,7 +15,7 @@ $QUICK_COCOS2DX_ROOT/lib/sdk/punchbox_ad/punchbox_ad_android/libs
 ### ios工程注意事项 ###
 
 * *工程依赖源代码位置*
-$QUICK_COCOS2DX_ROOT/lib/sdk/punchbox_ad/punchbox_ad_ios/punchbox_ad_ios
+$QMM_ROOT/lib/sdk/punchbox_ad/punchbox_ad_ios/punchbox_ad_ios
 
 * *SDK版本*
 

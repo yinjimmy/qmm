@@ -2,10 +2,10 @@
 ### android工程注意事项 ###
 
 * **工程依赖源代码位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_push/umeng_push_android/umeng_push_android
+$QMM_ROOT/lib/sdk/umeng_push/umeng_push_android/umeng_push_android
 
 * **工程依赖库位置**
-$QUICK_COCOS2DX_ROOT/lib/sdk/umeng_push/umeng_push_android/libs/*
+$QMM_ROOT/lib/sdk/umeng_push/umeng_push_android/libs/*
 
 * *SDK版本*
 
