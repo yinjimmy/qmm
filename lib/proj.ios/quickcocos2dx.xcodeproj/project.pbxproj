@@ -301,12 +301,6 @@
 		F4E8830B177015C400577406 /* CCTextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8828B177015C400577406 /* CCTextureCache.cpp */; };
 		F4E8830C177015C400577406 /* CCTextureETC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8828D177015C400577406 /* CCTextureETC.cpp */; };
 		F4E8830D177015C400577406 /* CCTexturePVR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8828F177015C400577406 /* CCTexturePVR.cpp */; };
-		F4E8830E177015C400577406 /* CCParallaxNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E88292177015C400577406 /* CCParallaxNode.cpp */; };
-		F4E8830F177015C400577406 /* CCTileMapAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E88294177015C400577406 /* CCTileMapAtlas.cpp */; };
-		F4E88310177015C400577406 /* CCTMXLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E88296177015C400577406 /* CCTMXLayer.cpp */; };
-		F4E88311177015C400577406 /* CCTMXObjectGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E88298177015C400577406 /* CCTMXObjectGroup.cpp */; };
-		F4E88312177015C400577406 /* CCTMXTiledMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8829A177015C400577406 /* CCTMXTiledMap.cpp */; };
-		F4E88313177015C400577406 /* CCTMXXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8829C177015C400577406 /* CCTMXXMLParser.cpp */; };
 		F4E88314177015C400577406 /* CCTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E8829F177015C400577406 /* CCTouch.cpp */; };
 		F4E88315177015C400577406 /* CCTouchDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E882A2177015C400577406 /* CCTouchDispatcher.cpp */; };
 		F4E88316177015C400577406 /* CCTouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4E882A4177015C400577406 /* CCTouchHandler.cpp */; };
@@ -1033,18 +1027,6 @@
 		F4E8828E177015C400577406 /* CCTextureETC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextureETC.h; sourceTree = "<group>"; };
 		F4E8828F177015C400577406 /* CCTexturePVR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTexturePVR.cpp; sourceTree = "<group>"; };
 		F4E88290177015C400577406 /* CCTexturePVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTexturePVR.h; sourceTree = "<group>"; };
-		F4E88292177015C400577406 /* CCParallaxNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCParallaxNode.cpp; sourceTree = "<group>"; };
-		F4E88293177015C400577406 /* CCParallaxNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParallaxNode.h; sourceTree = "<group>"; };
-		F4E88294177015C400577406 /* CCTileMapAtlas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTileMapAtlas.cpp; sourceTree = "<group>"; };
-		F4E88295177015C400577406 /* CCTileMapAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTileMapAtlas.h; sourceTree = "<group>"; };
-		F4E88296177015C400577406 /* CCTMXLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTMXLayer.cpp; sourceTree = "<group>"; };
-		F4E88297177015C400577406 /* CCTMXLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTMXLayer.h; sourceTree = "<group>"; };
-		F4E88298177015C400577406 /* CCTMXObjectGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTMXObjectGroup.cpp; sourceTree = "<group>"; };
-		F4E88299177015C400577406 /* CCTMXObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTMXObjectGroup.h; sourceTree = "<group>"; };
-		F4E8829A177015C400577406 /* CCTMXTiledMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTMXTiledMap.cpp; sourceTree = "<group>"; };
-		F4E8829B177015C400577406 /* CCTMXTiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTMXTiledMap.h; sourceTree = "<group>"; };
-		F4E8829C177015C400577406 /* CCTMXXMLParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTMXXMLParser.cpp; sourceTree = "<group>"; };
-		F4E8829D177015C400577406 /* CCTMXXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTMXXMLParser.h; sourceTree = "<group>"; };
 		F4E8829F177015C400577406 /* CCTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTouch.cpp; sourceTree = "<group>"; };
 		F4E882A0177015C400577406 /* CCTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTouch.h; sourceTree = "<group>"; };
 		F4E882A1177015C400577406 /* CCTouchDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTouchDelegateProtocol.h; sourceTree = "<group>"; };
@@ -2026,7 +2008,6 @@
 				F4E88253177015C400577406 /* support */,
 				F4E88280177015C400577406 /* text_input_node */,
 				F4E88286177015C400577406 /* textures */,
-				F4E88291177015C400577406 /* tilemap_parallax_nodes */,
 				F4E8829E177015C400577406 /* touch_dispatcher */,
 			);
 			path = cocos2dx;
@@ -2683,25 +2664,6 @@
 			path = textures;
 			sourceTree = "<group>";
 		};
-		F4E88291177015C400577406 /* tilemap_parallax_nodes */ = {
-			isa = PBXGroup;
-			children = (
-				F4E88292177015C400577406 /* CCParallaxNode.cpp */,
-				F4E88293177015C400577406 /* CCParallaxNode.h */,
-				F4E88294177015C400577406 /* CCTileMapAtlas.cpp */,
-				F4E88295177015C400577406 /* CCTileMapAtlas.h */,
-				F4E88296177015C400577406 /* CCTMXLayer.cpp */,
-				F4E88297177015C400577406 /* CCTMXLayer.h */,
-				F4E88298177015C400577406 /* CCTMXObjectGroup.cpp */,
-				F4E88299177015C400577406 /* CCTMXObjectGroup.h */,
-				F4E8829A177015C400577406 /* CCTMXTiledMap.cpp */,
-				F4E8829B177015C400577406 /* CCTMXTiledMap.h */,
-				F4E8829C177015C400577406 /* CCTMXXMLParser.cpp */,
-				F4E8829D177015C400577406 /* CCTMXXMLParser.h */,
-			);
-			path = tilemap_parallax_nodes;
-			sourceTree = "<group>";
-		};
 		F4E8829E177015C400577406 /* touch_dispatcher */ = {
 			isa = PBXGroup;
 			children = (
@@ -3103,13 +3065,7 @@
 				F4E8830D177015C400577406 /* CCTexturePVR.cpp in Sources */,
 				2EBAD9391918BBDC00FF9BD6 /* CCSepiaFilter.cpp in Sources */,
 				F459EA76180D04D8006CBDF1 /* CCCryptoIOS.mm in Sources */,
-				F4E8830E177015C400577406 /* CCParallaxNode.cpp in Sources */,
 				F459EA8C180D04D8006CBDF1 /* CCStorePaymentTransaction.cpp in Sources */,
-				F4E8830F177015C400577406 /* CCTileMapAtlas.cpp in Sources */,
-				F4E88310177015C400577406 /* CCTMXLayer.cpp in Sources */,
-				F4E88311177015C400577406 /* CCTMXObjectGroup.cpp in Sources */,
-				F4E88312177015C400577406 /* CCTMXTiledMap.cpp in Sources */,
-				F4E88313177015C400577406 /* CCTMXXMLParser.cpp in Sources */,
 				F475E990199E116300CDEA69 /* CCDampedSpringJoint.cpp in Sources */,
 				F4E88314177015C400577406 /* CCTouch.cpp in Sources */,
 				F4E88315177015C400577406 /* CCTouchDispatcher.cpp in Sources */,

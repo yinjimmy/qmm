@@ -141,13 +141,7 @@ LOCAL_SRC_FILES := \
     touch_dispatcher/CCTouchTargetNode.cpp \
     support/image_support/TGAlib.cpp \
     textures/CCTextureETC.cpp \
-    textures/CCTexturePVR.cpp \
-    tilemap_parallax_nodes/CCParallaxNode.cpp \
-    tilemap_parallax_nodes/CCTMXLayer.cpp \
-    tilemap_parallax_nodes/CCTMXObjectGroup.cpp \
-    tilemap_parallax_nodes/CCTMXTiledMap.cpp \
-    tilemap_parallax_nodes/CCTMXXMLParser.cpp \
-    tilemap_parallax_nodes/CCTileMapAtlas.cpp
+    textures/CCTexturePVR.cpp
 
 ifeq ($(CC_WEBP_ENABLED),1)
 LOCAL_SRC_FILES += \

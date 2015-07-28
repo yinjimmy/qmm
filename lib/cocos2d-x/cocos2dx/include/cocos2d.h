@@ -275,14 +275,6 @@ THE SOFTWARE.
 #include "textures/CCTextureCache.h"
 #include "textures/CCTexturePVR.h"
 
-// tilemap_parallax_nodes
-#include "tilemap_parallax_nodes/CCParallaxNode.h"
-#include "tilemap_parallax_nodes/CCTMXLayer.h"
-#include "tilemap_parallax_nodes/CCTMXObjectGroup.h"
-#include "tilemap_parallax_nodes/CCTMXTiledMap.h"
-#include "tilemap_parallax_nodes/CCTMXXMLParser.h"
-#include "tilemap_parallax_nodes/CCTileMapAtlas.h"
-
 // touch_dispatcher
 #include "touch_dispatcher/CCTouch.h"
 #include "touch_dispatcher/CCTouchDelegateProtocol.h"
