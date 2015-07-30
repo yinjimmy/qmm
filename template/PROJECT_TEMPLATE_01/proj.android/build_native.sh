@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+function cmd()
+{
+    cmd=$1
+
+    echo ""
+    echo "--------------------------------------------"
+    echo "$cmd"
+    echo "--------------------------------------------"
+    echo ""
+
+    eval "$cmd"
+
+    if [[ $? != 0 ]]; then
+        echo "running:"
+        echo "$cmd"
+        exit $?
+    fi
+}
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 APP_ROOT="$DIR/.."
 APP_ANDROID_ROOT="$DIR"
@@ -39,3 +58,11 @@ echo "Using prebuilt externals"
 "$ANDROID_NDK_ROOT"/ndk-build -j`sysctl -n hw.logicalcpu_max` $ANDROID_NDK_BUILD_FLAGS \
 NDK_DEBUG=$NDK_DEBUG $NDK_BUILD_FLAGS -C "$APP_ANDROID_ROOT" $* \
 "NDK_MODULE_PATH=${QMM_ROOT}:${COCOS2DX_ROOT}:${COCOS2DX_ROOT}/cocos2dx/platform/third_party/android/prebuilt"
+
+
+cmd "android update project -t android-10 -p ${QMM_ROOT}/lib/cocos2d-x/cocos2dx/platform/android/java"
+cmd "android update project -t android-10 -p `pwd`"
+cmd "ant clean debug -f `pwd`/build.xml"
+cmd "adb uninstall \"__PROJECT_PACKAGE_FULL_NAME_L__\""
+# adb install /path/to/apk
+# adb shell am start -n "__PROJECT_PACKAGE_FULL_NAME_L__/.__PROJECT_PACKAGE_LAST_NAME_UF__"
