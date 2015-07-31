@@ -97,9 +97,9 @@ if type(USE_DEPRECATED_EVENT_ARGUMENTS) ~= "boolean" then USE_DEPRECATED_EVENT_A
 
 local CURRENT_MODULE_NAME = ...
 
-cc = cc or {}
-cc.PACKAGE_NAME = string.sub(CURRENT_MODULE_NAME, 1, -6)
-cc.VERSION = "2.2.5"
+cc                = cc or {}
+cc.PACKAGE_NAME   = string.sub(CURRENT_MODULE_NAME, 1, -6)
+cc.VERSION        = "2.2.6"
 cc.FRAMEWORK_NAME = "quick-cocos2d-x"
 
 -- disable stdout buffer
