@@ -21,11 +21,7 @@
 #include <map>
 #include <string>
 
-#if ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) && (CC_CURL_ENABLED == 0))
-#include <jni.h>
-#else
 #include "curl/curl.h"
-#endif
 
 using namespace std;
 USING_NS_CC;
@@ -155,14 +151,8 @@ private:
     , m_curlState(kCCHTTPRequestCURLStateIdle)
     , m_postData(NULL)
     , m_postDataLen(0)
-#if ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) && (CC_CURL_ENABLED == 0))
-    , m_httpConnect(NULL)
-    , m_cookies(NULL)
-    , m_nTimeOut(0)
-#else
     , m_formPost(NULL)
     , m_lastPost(NULL)
-#endif
     , m_dltotal(0)
     , m_dlnow(0)
     , m_ultotal(0)
@@ -185,13 +175,11 @@ private:
     CCHTTPRequestDelegate* m_delegate;
     int m_listener;
     int m_curlState;
-
-#if !((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) && (CC_CURL_ENABLED == 0))
+    
     CURL *m_curl;
-	curl_httppost *m_formPost;
-	curl_httppost *m_lastPost;
-#endif
-
+    curl_httppost *m_formPost;
+    curl_httppost *m_lastPost;
+    
     int     m_state;
     int     m_errorCode;
     string  m_errorMessage;
@@ -203,15 +191,6 @@ private:
     
     void* m_postData;
     size_t m_postDataLen;
-
-#if ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) && (CC_CURL_ENABLED == 0))
-    jobject m_httpConnect;
-    const char* m_httpMethod;
-    Fields m_postFile;
-    Fields m_postContent;
-    int m_nTimeOut;
-    const char* m_cookies;
-#endif
 
     // response
     long m_responseCode;
@@ -246,36 +225,6 @@ private:
     static size_t writeDataCURL(void *buffer, size_t size, size_t nmemb, void *userdata);
     static size_t writeHeaderCURL(void *buffer, size_t size, size_t nmemb, void *userdata);
     static int progressCURL(void *userdata, double dltotal, double dlnow, double ultotal, double ulnow);
-
-#if ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) && (CC_CURL_ENABLED == 0))
-
-    pthread_attr_t m_threadAttr;
-
-    bool isNeedBoundary();
-
-    void createURLConnectJava();
-    void setRequestMethodJava();
-    void addRequestHeaderJava(const char* key, const char* value, bool bBoundary);
-    void setTimeoutJava(int msTime);
-    int connectJava();
-    void postContentJava(const char* key, const char* value, bool bConnectSym);
-    void postContentByteArrayJava(void* val, size_t len);
-    void postFromContentJava(const char* key, const char* value);
-    void postFromFileJava(const char* fileName, const char* filePath);
-    void postFormEndJava(bool bBoundary);
-    int getResponedCodeJava();
-    char* getResponedErrJava();
-    char* getResponedHeaderJava();
-    char* getResponedHeaderByIdxJava(int idx);
-    char* getResponedHeaderByKeyJava(const char* key);
-    int getResponedHeaderByKeyIntJava(const char* key);
-    int   getResponedStringJava(char** ppData);
-    void closeJava();
-
-    int   getCStrFromJByteArray(jbyteArray jba, JNIEnv* env, char** ppData);
-    char* getCStrFromJString(jstring jstr, JNIEnv* env);
-#endif
-
 };
 
 NS_CC_EXTRA_END
