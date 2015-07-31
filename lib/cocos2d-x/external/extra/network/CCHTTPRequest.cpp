@@ -15,6 +15,28 @@ NS_CC_EXTRA_BEGIN
 
 unsigned int CCHTTPRequest::s_id = 0;
 
+CCHTTPRequest::CCHTTPRequest()
+: m_delegate(NULL)
+, m_listener(0)
+, m_state(kCCHTTPRequestStateIdle)
+, m_errorCode(0)
+, m_responseCode(0)
+, m_responseBuffer(NULL)
+, m_responseBufferLength(0)
+, m_responseDataLength(0)
+, m_curlState(kCCHTTPRequestCURLStateIdle)
+, m_postData(NULL)
+, m_postDataLen(0)
+, m_id(0)
+, m_formPost(NULL)
+, m_lastPost(NULL)
+, m_dltotal(0)
+, m_dlnow(0)
+, m_ultotal(0)
+, m_ulnow(0)
+{
+}
+
 CCHTTPRequest *CCHTTPRequest::createWithUrl(CCHTTPRequestDelegate *delegate,
                                             const char *url,
                                             int method)
@@ -72,7 +94,8 @@ bool CCHTTPRequest::initWithUrl(const char *url, int method)
     }
     
     ++s_id;
-    CCLOG("CCHTTPRequest[0x%04x] - create request with url: %s", s_id, url);
+    m_id = s_id;
+    CCLOG("CCHTTPRequest[0x%04x] - create request with url: %s", m_id, url);
     return true;
 #else
     return false;
@@ -86,7 +109,7 @@ CCHTTPRequest::~CCHTTPRequest(void)
     {
         CCLuaEngine::defaultEngine()->removeScriptHandler(m_listener);
     }
-    CCLOG("CCHTTPRequest[0x%04x] - request removed", s_id);
+    CCLOG("CCHTTPRequest[0x%04x] - request removed", m_id);
 }
 
 void CCHTTPRequest::setRequestUrl(const char *url)
@@ -245,14 +268,14 @@ bool CCHTTPRequest::start(void)
 #else
     pthread_create(&m_thread, NULL, requestCURL, this);
     pthread_detach(m_thread);
-#endif
+#endif // _WINDOWS_
     
     CCDirector::sharedDirector()->getScheduler()->scheduleUpdateForTarget(this, 0, false);
-    // CCLOG("CCHTTPRequest[0x%04x] - request start", s_id);
+    CCLOG("CCHTTPRequest[0x%04x] - request start", m_id);
     return true;
 #else
     return false;
-#endif
+#endif // CC_CURL_ENABLED > 0
 }
 
 void CCHTTPRequest::cancel(void)
@@ -394,12 +417,12 @@ void CCHTTPRequest::update(float dt)
 
     if (m_state == kCCHTTPRequestStateCompleted)
     {
-        // CCLOG("CCHTTPRequest[0x%04x] - request completed", s_id);
+        CCLOG("CCHTTPRequest[0x%04x] - request completed", m_id);
         if (m_delegate) m_delegate->requestFinished(this);
     }
     else
     {
-        // CCLOG("CCHTTPRequest[0x%04x] - request failed", s_id);
+        CCLOG("CCHTTPRequest[0x%04x] - request failed", m_id);
         if (m_delegate) m_delegate->requestFailed(this);
     }
 
@@ -574,7 +597,7 @@ DWORD WINAPI CCHTTPRequest::requestCURL(LPVOID userdata)
     static_cast<CCHTTPRequest*>(userdata)->onRequest();
     return 0;
 }
-#else // _WINDOWS_
+#else
 void *CCHTTPRequest::requestCURL(void *userdata)
 {
     static_cast<CCHTTPRequest*>(userdata)->onRequest();

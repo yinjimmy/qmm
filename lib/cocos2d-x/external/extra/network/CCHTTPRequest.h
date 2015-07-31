@@ -139,26 +139,7 @@ public:
     virtual void update(float dt);
 
 private:
-    CCHTTPRequest(void)
-    : m_delegate(NULL)
-    , m_listener(0)
-    , m_state(kCCHTTPRequestStateIdle)
-    , m_errorCode(0)
-    , m_responseCode(0)
-    , m_responseBuffer(NULL)
-    , m_responseBufferLength(0)
-    , m_responseDataLength(0)
-    , m_curlState(kCCHTTPRequestCURLStateIdle)
-    , m_postData(NULL)
-    , m_postDataLen(0)
-    , m_formPost(NULL)
-    , m_lastPost(NULL)
-    , m_dltotal(0)
-    , m_dlnow(0)
-    , m_ultotal(0)
-    , m_ulnow(0)
-    {
-    }
+    CCHTTPRequest(void);
     bool initWithDelegate(CCHTTPRequestDelegate* delegate, const char *url, int method);
 #if CC_LUA_ENGINE_ENABLED > 0
     bool initWithListener(LUA_FUNCTION listener, const char *url, int method);
@@ -171,6 +152,7 @@ private:
     };
 
     static unsigned int s_id;
+    unsigned int m_id;
     string m_url;
     CCHTTPRequestDelegate* m_delegate;
     int m_listener;
