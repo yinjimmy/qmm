@@ -21,16 +21,16 @@ echo "QMM_ROOT = \"$QMM_ROOT\""
 echo ""
 
 # set Xcode
-defaults write com.apple.dt.Xcode IDEApplicationwideBuildSettings -dict-add QMM_ROOT "$QMM_ROOT"
-defaults write com.apple.dt.Xcode IDESourceTreeDisplayNames -dict-add QMM_ROOT QMM_ROOT
-IDEApplicationwideBuildSettings=`defaults read com.apple.dt.Xcode IDEApplicationwideBuildSettings`
-IDESourceTreeDisplayNames=`defaults read com.apple.dt.Xcode IDESourceTreeDisplayNames`
-
-echo "> Xcode settings updated."
+#defaults write com.apple.dt.Xcode IDEApplicationwideBuildSettings -dict-add QMM_ROOT "$QMM_ROOT"
+#defaults write com.apple.dt.Xcode IDESourceTreeDisplayNames -dict-add QMM_ROOT QMM_ROOT
+#IDEApplicationwideBuildSettings=`defaults read com.apple.dt.Xcode IDEApplicationwideBuildSettings`
+#IDESourceTreeDisplayNames=`defaults read com.apple.dt.Xcode IDESourceTreeDisplayNames`
+#
+#echo "> Xcode settings updated."
 
 # set quick player
-defaults write org.cocos.quick.player QMM_ROOT "$QMM_ROOT"
-echo "> quick player settings updated."
+#defaults write org.cocos.quick.player QMM_ROOT "$QMM_ROOT"
+#echo "> quick player settings updated."
 
 # set .bash_profile or .profile
 if [ -f ~/.bash_profile ]; then
@@ -78,4 +78,3 @@ echo ""
 
 echo "done."
 echo ""
-
