@@ -60,9 +60,9 @@ NDK_DEBUG=$NDK_DEBUG $NDK_BUILD_FLAGS -C "$APP_ANDROID_ROOT" $* \
 "NDK_MODULE_PATH=${QMM_ROOT}:${COCOS2DX_ROOT}:${COCOS2DX_ROOT}/cocos2dx/platform/third_party/android/prebuilt"
 
 
-cmd "android update project -t android-10 -p ../lib/cocos2d-x/cocos2dx/platform/android/java"
+run_and_check_cmd "android update project -t android-10 -p ../lib/cocos2d-x/cocos2dx/platform/android/java"
 run_and_check_cmd "android update project -t android-10 -p `pwd`"
 run_and_check_cmd "ant clean debug -f `pwd`/build.xml"
-run_and_check_cmd "adb uninstall \"__PROJECT_PACKAGE_FULL_NAME_L__\""
+#run_and_check_cmd "adb uninstall \"__PROJECT_PACKAGE_FULL_NAME_L__\""
 # adb install /path/to/apk
 # adb shell am start -n "__PROJECT_PACKAGE_FULL_NAME_L__/.__PROJECT_PACKAGE_LAST_NAME_UF__"
