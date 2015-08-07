@@ -23,7 +23,7 @@
         {
             "location": "/api/display/", 
             "text": "display\n\n\ndisplay mode", 
-            "title": "Creating a new Mashmallow project"
+            "title": "display.lua"
         }, 
         {
             "location": "/api/display/#display", 
@@ -31,39 +31,14 @@
             "title": "display"
         }, 
         {
-            "location": "/about/", 
-            "text": "Pede dant erubuit haemonii arbor\n\n\nTendite quaeritis praestant stipite\n\n\nLorem markdownum ille. Dea \nquam\n dryades\ntune mihi metuunt. Totoque nato glandibus tandem at sanguis haud totis quondam,\nin erat; nec genitor incessere.\n\n\nif (matrix) {\n    station_network_panel += firewall_mbps_jquery;\n} else {\n    wordartDcim.sdram = 4;\n    google_computing_user = mouse_network_uml - dv_oasis_moodle.internic(\n            token_hypertext_web);\n}\nvar rich = fileUatCable + integrated + bios;\ncard_memory = root_telnet_ipv(interface_link_soap(ppcFile)) -\n        peripheralSystem;\nblogTruncateRecursive(token_kindle(winsock_soft(3), 234209));\nif (5 - node_pebibyte.service_virus_tftp.gnutella(office * 3, suffix_xmp)) {\n    wiki += 1;\n}\n\n\n\nLatuit remittant\n\n\nSine efficerentque \nferro\n est qui tamen \nmeoque\n. In posset subibat, pertimui\niugulati audita. Tamen tamen terruit date, \nmaternos orbi\n loquentem multaeque\nut rarior placet. Sonant matrem \ntollit ignoto cecidit\n,\nsupplex, hunc, relinquam cornua dis herbis Sole conparentis dixerat et Iovis se.\n\n\nArtes \nesse\n non diroque cantu orbem lugebitis Styphelumque dolet? Tot sic natis\ntemptamina \nferenda saepe\n! Ordine dixi tu gens\nnubes decerpserat advolat summique ipsum in Herculeae voluit Megareius\npromunturiumque opprimere \ncontendere\n? Exire\n\nfrontem quondam\n duris tempora fusum intrat iuppiter nervi gravi illos.\n\n\nNunc tenet mulcet porrexerat concutiensque subitus occiderat\n\n\nHic vult verbis agna nam iamque est verba tumidum et moriemur leto,\nperstrinxerat nata spiramenta tumet \ncomitum\n, loquendo. Sim Nessus, dixit et\nquem, ipse vires delectat quod. Nubes Somni et lumina faciles occupat visae sed\nremotis lapillis silices memorant locis creatus \ntutaque\n! Parenti ait concilium\nplantas, diem vernum, lapsasque est artus.\n\n\nHastamque silvae\n\n\nPraeterit os tamen coniugis custodia hostemque obscura quas proceres alas\nclarum? Tu et munere nubibus supplex seque. Que ille inferior ambo intendens\npater ad digiti esto Eurypylique virum; in. Nec fiducia, sic audiet se satis\nvirtute, licet, quisque lumina aevum te salus ille fronte.\n\n\nNidus tulit ora longo curat ipsa tenuit\n\n\nLupi fas mare honorque iamque guttura me sponte roga dixit cursuque reliquit\ncrescit quidem caelo obrutaque carina. Simus orbem feras exstinctos veniente\necce quoque vacantem, suum devorat reserato quater. Absumpsit tecti, quod parere\nhorriferamque quanta imago pars temperat.\n\n\n\n\nDolor socer aquis tendentemque datis Prothoenora dixit inlimis \nadfata\nMelampus\n. Erat eminet.\n\n\n\n\nColore\n est trahunt agendum in atque alipedum fessos\nfemina, serpentem sospite fuerat Amathunta futuros solent bicorni, polumque.\nSine \nconcretam\n sententia conplexibus inque\nat rapidus dixit, per fata est ite negat, abesset Berecyntius.", 
-            "title": "About"
+            "location": "/Changelog/", 
+            "text": "Changelog", 
+            "title": "Changelog"
         }, 
         {
-            "location": "/about/#pede-dant-erubuit-haemonii-arbor", 
+            "location": "/Changelog/#changelog", 
             "text": "", 
-            "title": "Pede dant erubuit haemonii arbor"
-        }, 
-        {
-            "location": "/about/#tendite-quaeritis-praestant-stipite", 
-            "text": "Lorem markdownum ille. Dea  quam  dryades\ntune mihi metuunt. Totoque nato glandibus tandem at sanguis haud totis quondam,\nin erat; nec genitor incessere.  if (matrix) {\n    station_network_panel += firewall_mbps_jquery;\n} else {\n    wordartDcim.sdram = 4;\n    google_computing_user = mouse_network_uml - dv_oasis_moodle.internic(\n            token_hypertext_web);\n}\nvar rich = fileUatCable + integrated + bios;\ncard_memory = root_telnet_ipv(interface_link_soap(ppcFile)) -\n        peripheralSystem;\nblogTruncateRecursive(token_kindle(winsock_soft(3), 234209));\nif (5 - node_pebibyte.service_virus_tftp.gnutella(office * 3, suffix_xmp)) {\n    wiki += 1;\n}", 
-            "title": "Tendite quaeritis praestant stipite"
-        }, 
-        {
-            "location": "/about/#latuit-remittant", 
-            "text": "Sine efficerentque  ferro  est qui tamen  meoque . In posset subibat, pertimui\niugulati audita. Tamen tamen terruit date,  maternos orbi  loquentem multaeque\nut rarior placet. Sonant matrem  tollit ignoto cecidit ,\nsupplex, hunc, relinquam cornua dis herbis Sole conparentis dixerat et Iovis se.  Artes  esse  non diroque cantu orbem lugebitis Styphelumque dolet? Tot sic natis\ntemptamina  ferenda saepe ! Ordine dixi tu gens\nnubes decerpserat advolat summique ipsum in Herculeae voluit Megareius\npromunturiumque opprimere  contendere ? Exire frontem quondam  duris tempora fusum intrat iuppiter nervi gravi illos.", 
-            "title": "Latuit remittant"
-        }, 
-        {
-            "location": "/about/#nunc-tenet-mulcet-porrexerat-concutiensque-subitus-occiderat", 
-            "text": "Hic vult verbis agna nam iamque est verba tumidum et moriemur leto,\nperstrinxerat nata spiramenta tumet  comitum , loquendo. Sim Nessus, dixit et\nquem, ipse vires delectat quod. Nubes Somni et lumina faciles occupat visae sed\nremotis lapillis silices memorant locis creatus  tutaque ! Parenti ait concilium\nplantas, diem vernum, lapsasque est artus.", 
-            "title": "Nunc tenet mulcet porrexerat concutiensque subitus occiderat"
-        }, 
-        {
-            "location": "/about/#hastamque-silvae", 
-            "text": "Praeterit os tamen coniugis custodia hostemque obscura quas proceres alas\nclarum? Tu et munere nubibus supplex seque. Que ille inferior ambo intendens\npater ad digiti esto Eurypylique virum; in. Nec fiducia, sic audiet se satis\nvirtute, licet, quisque lumina aevum te salus ille fronte.", 
-            "title": "Hastamque silvae"
-        }, 
-        {
-            "location": "/about/#nidus-tulit-ora-longo-curat-ipsa-tenuit", 
-            "text": "Lupi fas mare honorque iamque guttura me sponte roga dixit cursuque reliquit\ncrescit quidem caelo obrutaque carina. Simus orbem feras exstinctos veniente\necce quoque vacantem, suum devorat reserato quater. Absumpsit tecti, quod parere\nhorriferamque quanta imago pars temperat.   Dolor socer aquis tendentemque datis Prothoenora dixit inlimis  adfata\nMelampus . Erat eminet.   Colore  est trahunt agendum in atque alipedum fessos\nfemina, serpentem sospite fuerat Amathunta futuros solent bicorni, polumque.\nSine  concretam  sententia conplexibus inque\nat rapidus dixit, per fata est ite negat, abesset Berecyntius.", 
-            "title": "Nidus tulit ora longo curat ipsa tenuit"
+            "title": "Changelog"
         }
     ]
 }
