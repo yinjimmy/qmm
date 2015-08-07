@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function cmd()
+function run_and_check_cmd()
 {
     cmd=$1
 
@@ -61,8 +61,8 @@ NDK_DEBUG=$NDK_DEBUG $NDK_BUILD_FLAGS -C "$APP_ANDROID_ROOT" $* \
 
 
 cmd "android update project -t android-10 -p ../lib/cocos2d-x/cocos2dx/platform/android/java"
-cmd "android update project -t android-10 -p `pwd`"
-cmd "ant clean debug -f `pwd`/build.xml"
-cmd "adb uninstall \"__PROJECT_PACKAGE_FULL_NAME_L__\""
+run_and_check_cmd "android update project -t android-10 -p `pwd`"
+run_and_check_cmd "ant clean debug -f `pwd`/build.xml"
+run_and_check_cmd "adb uninstall \"__PROJECT_PACKAGE_FULL_NAME_L__\""
 # adb install /path/to/apk
 # adb shell am start -n "__PROJECT_PACKAGE_FULL_NAME_L__/.__PROJECT_PACKAGE_LAST_NAME_UF__"
