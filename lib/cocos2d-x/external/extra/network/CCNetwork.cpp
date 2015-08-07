@@ -3,7 +3,7 @@
 
 NS_CC_EXTRA_BEGIN
 
-#if (CC_CURL_ENABLED > 0 || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#if (CC_CURL_ENABLED > 0)
 
 CCHTTPRequest* CCNetwork::createHTTPRequest(CCHTTPRequestDelegate* delegate,
                                             const char* url,

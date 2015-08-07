@@ -1,4 +1,4 @@
-
+$#if (CC_CURL_ENABLED > 0)
 $#include "network/CCNetwork.h"
 
 $using namespace std;
@@ -55,3 +55,5 @@ class CCNetwork
                                                const char* url,
                                                int method = kCCHTTPRequestMethodGET);
 };
+
+#endif // (CC_CURL_ENABLED > 0)

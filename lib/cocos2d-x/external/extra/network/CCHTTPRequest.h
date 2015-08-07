@@ -2,6 +2,8 @@
 #ifndef __CC_HTTP_REQUEST_H_
 #define __CC_HTTP_REQUEST_H_
 
+#if (CC_CURL_ENABLED > 0)
+
 #include "cocos2dx_extra.h"
 #include "cocos2d.h"
 #include "network/CCHTTPRequestDelegate.h"
@@ -157,11 +159,11 @@ private:
     CCHTTPRequestDelegate* m_delegate;
     int m_listener;
     int m_curlState;
-    
+
     CURL *m_curl;
     curl_httppost *m_formPost;
     curl_httppost *m_lastPost;
-    
+
     int     m_state;
     int     m_errorCode;
     string  m_errorMessage;
@@ -170,7 +172,7 @@ private:
     typedef map<string, string> Fields;
     Fields m_postFields;
     CCHTTPRequestHeaders m_headers;
-    
+
     void* m_postData;
     size_t m_postDataLen;
 
@@ -181,12 +183,12 @@ private:
     size_t m_responseBufferLength;
     size_t m_responseDataLength;
     string m_responseCookies;
-    
+
     double m_dltotal;
     double m_dlnow;
     double m_ultotal;
     double m_ulnow;
-    
+
     // private methods
     void cleanup(void);
     void cleanupRawResponseBuff(void);
@@ -211,4 +213,5 @@ private:
 
 NS_CC_EXTRA_END
 
+#endif // (CC_CURL_ENABLED > 0)
 #endif /* __CC_HTTP_REQUEST_H_ */

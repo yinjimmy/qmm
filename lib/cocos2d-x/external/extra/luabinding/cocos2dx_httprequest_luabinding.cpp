@@ -3,7 +3,7 @@
 ** Generated automatically by tolua++-1.0.92 on Wed Oct 22 00:31:05 2014.
 */
 
-#if (CC_CURL_ENABLED > 0 || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#if (CC_CURL_ENABLED > 0)
 
 #include "cocos2dx_httprequest_luabinding.h"
 #include "CCLuaEngine.h"
@@ -29,8 +29,8 @@ using namespace cocos2d::extra;
 static void tolua_reg_types (lua_State* tolua_S)
 {
  tolua_usertype(tolua_S,"CCNetwork"); toluafix_add_type_mapping(CLASS_HASH_CODE(typeid(CCNetwork)), "CCNetwork");
- 
- 
+
+
  tolua_usertype(tolua_S,"CCHTTPRequest"); toluafix_add_type_mapping(CLASS_HASH_CODE(typeid(CCHTTPRequest)), "CCHTTPRequest");
  tolua_usertype(tolua_S,"CCObject"); toluafix_add_type_mapping(CLASS_HASH_CODE(typeid(CCObject)), "CCObject");
 }
@@ -653,7 +653,7 @@ static int tolua_cocos2dx_httprequest_luabinding_CCHTTPRequest_getResponseData00
 #endif
   {
      self->getResponseDataLua();
-   
+
   }
  }
  return 1;

@@ -57,10 +57,8 @@ extern "C" {
 
 #include "lua_cocos2dx_manual.h"
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    #include "cocos2dx_httprequest_luabinding.h"
-#elif (CC_CURL_ENABLED > 0)
-    #include "cocos2dx_httprequest_luabinding.h"
+#if (CC_CURL_ENABLED > 0)
+#include "cocos2dx_httprequest_luabinding.h"
 #endif
 
 #if CC_FILTERS_ENABLED > 0
@@ -177,10 +175,8 @@ bool CCLuaStack::init(void)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     luaopen_cocos2dx_extra_ios_iap_luabinding(m_state);
 #endif
-    
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    luaopen_cocos2dx_httprequest_luabinding(m_state);
-#elif (CC_CURL_ENABLED > 0)
+
+#if (CC_CURL_ENABLED > 0)
     luaopen_cocos2dx_httprequest_luabinding(m_state);
 #endif
 
@@ -920,10 +916,10 @@ TOLUA_API int toluafix_pushusertype_ccobject(lua_State *L,
         lua_pushstring(L, type ? type : vtype);                     /* stack: refid_type refid type */
         lua_rawset(L, -3);                /* refid_type[refid] = type, stack: refid_type */
         lua_pop(L, 1);                                              /* stack: - */
-        
+
         //printf("[LUA] push CCObject OK - refid: %d, ptr: %x, type: %s\n", *p_refid, (int)ptr, type);
     }
-    
+
     tolua_pushusertype_and_addtoroot(L, ptr, type ? type : vtype);
     return 0;
 }

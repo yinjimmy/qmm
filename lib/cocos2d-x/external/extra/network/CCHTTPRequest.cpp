@@ -1,3 +1,5 @@
+#if (CC_CURL_ENABLED > 0)
+
 #include "network/CCHTTPRequest.h"
 #include <stdio.h>
 #include <iostream>
@@ -92,7 +94,7 @@ bool CCHTTPRequest::initWithUrl(const char *url, int method)
         curl_easy_setopt(m_curl, CURLOPT_POST, 1L);
         curl_easy_setopt(m_curl, CURLOPT_COPYPOSTFIELDS, "");
     }
-    
+
     ++s_id;
     m_id = s_id;
     CCLOG("CCHTTPRequest[0x%04x] - create request with url: %s", m_id, url);
@@ -219,11 +221,11 @@ void CCHTTPRequest::setAcceptEncoding(int acceptEncoding)
         case kCCHTTPRequestAcceptEncodingGzip:
             curl_easy_setopt(m_curl, CURLOPT_ACCEPT_ENCODING, "gzip");
             break;
-            
+
         case kCCHTTPRequestAcceptEncodingDeflate:
             curl_easy_setopt(m_curl, CURLOPT_ACCEPT_ENCODING, "deflate");
             break;
-            
+
         default:
             curl_easy_setopt(m_curl, CURLOPT_ACCEPT_ENCODING, "identity");
     }
@@ -269,7 +271,7 @@ bool CCHTTPRequest::start(void)
     pthread_create(&m_thread, NULL, requestCURL, this);
     pthread_detach(m_thread);
 #endif // _WINDOWS_
-    
+
     CCDirector::sharedDirector()->getScheduler()->scheduleUpdateForTarget(this, 0, false);
     CCLOG("CCHTTPRequest[0x%04x] - request start", m_id);
     return true;
@@ -348,10 +350,10 @@ int CCHTTPRequest::getResponseDataLength(void)
 size_t CCHTTPRequest::saveResponseData(const char *filename)
 {
     CCAssert(m_state == kCCHTTPRequestStateCompleted, "CCHTTPRequest::saveResponseData() - request not completed");
-    
+
     FILE *fp = fopen(filename, "wb");
     CCAssert(fp, "CCHTTPRequest::saveResponseData() - open file failure");
-    
+
     size_t writedBytes = m_responseDataLength;
     if (writedBytes > 0)
     {
@@ -394,7 +396,7 @@ void CCHTTPRequest::update(float dt)
         if (m_listener)
         {
             CCLuaValueDict dict;
-            
+
             dict["name"] = CCLuaValue::stringValue("inprogress");
             dict["dltotal"] = CCLuaValue::floatValue((float)m_dltotal);
             dict["dlnow"] = CCLuaValue::floatValue((float)m_dlnow);
@@ -436,15 +438,15 @@ void CCHTTPRequest::update(float dt)
             case kCCHTTPRequestStateCompleted:
                 dict["name"] = CCLuaValue::stringValue("completed");
                 break;
-                
+
             case kCCHTTPRequestStateCancelled:
                 dict["name"] = CCLuaValue::stringValue("cancelled");
                 break;
-                
+
             case kCCHTTPRequestStateFailed:
                 dict["name"] = CCLuaValue::stringValue("failed");
                 break;
-                
+
             default:
                 dict["name"] = CCLuaValue::stringValue("unknown");
         }
@@ -472,11 +474,11 @@ void CCHTTPRequest::onRequest(void)
             buf.sputn(part, strlen(part));
             buf.sputc('=');
             curl_free(part);
-            
+
             part = curl_easy_escape(m_curl, it->second.c_str(), 0);
             buf.sputn(part, strlen(part));
             curl_free(part);
-            
+
             buf.sputc('&');
         }
         curl_easy_setopt(m_curl, CURLOPT_COPYPOSTFIELDS, buf.str().c_str());
@@ -522,7 +524,7 @@ void CCHTTPRequest::onRequest(void)
 		m_formPost = NULL;
 	}
     curl_slist_free_all(chunk);
-    
+
     m_errorCode = code;
     m_errorMessage = (code == CURLE_OK) ? "" : curl_easy_strerror(code);
     m_state = (code == CURLE_OK) ? kCCHTTPRequestStateCompleted : kCCHTTPRequestStateFailed;
@@ -548,7 +550,7 @@ size_t CCHTTPRequest::onWriteHeader(void *buffer, size_t bytes)
 {
     char *headerBuffer = new char[bytes + 1];
     headerBuffer[bytes] = 0;
-    memcpy(headerBuffer, buffer, bytes);    
+    memcpy(headerBuffer, buffer, bytes);
     m_responseHeaders.push_back(string(headerBuffer));
     delete []headerBuffer;
     return bytes;
@@ -560,7 +562,7 @@ int CCHTTPRequest::onProgress(double dltotal, double dlnow, double ultotal, doub
     m_dlnow = dlnow;
     m_ultotal = ultotal;
     m_ulnow = ulnow;
-    
+
     return m_state == kCCHTTPRequestStateCancelled ? 1: 0;
 }
 
@@ -621,3 +623,5 @@ int CCHTTPRequest::progressCURL(void *userdata, double dltotal, double dlnow, do
 }
 
 NS_CC_EXTRA_END
+
+#endif // (CC_CURL_ENABLED > 0)
