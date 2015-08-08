@@ -240,10 +240,6 @@ public:
      *  @lua NA
      */
     CCArray();
-    /**
-     *  @lua NA
-     */
-    CCArray(unsigned int capacity);
 };
 
 // end of data_structure group

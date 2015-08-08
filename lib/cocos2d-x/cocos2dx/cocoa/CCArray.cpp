@@ -32,13 +32,6 @@ NS_CC_BEGIN
 CCArray::CCArray()
 : data(NULL)
 {
-    init();
-}
-
-CCArray::CCArray(unsigned int capacity)
-: data(NULL)
-{
-    initWithCapacity(capacity);
 }
 
 CCArray* CCArray::create()
