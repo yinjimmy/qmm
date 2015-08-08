@@ -75,8 +75,13 @@ extern "C" {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 #include "cocos2dx_extra_ios_iap_luabinding.h"
 #endif
+
+// websocket
+#if (CC_WEBSOCKET_ENABLED > 0)
 // WebSockets luabinding
 #include "Lua_web_socket.h"
+#endif
+
 // lua extensions
 #include "lua_extensions.h"
 
@@ -180,8 +185,11 @@ bool CCLuaStack::init(void)
     luaopen_cocos2dx_httprequest_luabinding(m_state);
 #endif
 
+#if (CC_WEBSOCKET_ENABLED > 0)
     // load WebSockets luabinding
     tolua_web_socket_open(m_state);
+#endif
+    
     // lua extensions
     luaopen_lua_extensions(m_state);
 

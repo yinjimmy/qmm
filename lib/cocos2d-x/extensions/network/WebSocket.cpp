@@ -27,6 +27,8 @@
 
  ****************************************************************************/
 
+#if (CC_WEBSOCKET_ENABLED > 0)
+
 #include "WebSocket.h"
 #include <pthread.h>
 #include <queue>
@@ -727,3 +729,5 @@ void WebSocket::onUIThreadReceiveMessage(WsMessage* msg)
 }
 
 NS_CC_EXT_END
+
+#endif // CC_WEBSOCKET_ENABLED > 0

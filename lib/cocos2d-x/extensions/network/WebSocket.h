@@ -30,6 +30,8 @@
 #ifndef __CC_WEBSOCKET_H__
 #define __CC_WEBSOCKET_H__
 
+#if (CC_WEBSOCKET_ENABLED > 0)
+
 #include "ExtensionMacros.h"
 #include "cocos2d.h"
 #include "libwebsockets.h"
@@ -168,4 +170,6 @@ private:
 
 NS_CC_EXT_END
 
-#endif /* defined(__CC_JSB_WEBSOCKET_H__) */
+#endif // CC_WEBSOCKET_ENABLED > 0
+
+#endif /* defined(__CC_WEBSOCKET_H__) */

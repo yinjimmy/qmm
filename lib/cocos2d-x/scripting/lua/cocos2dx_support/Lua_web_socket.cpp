@@ -1,3 +1,5 @@
+#if (CC_WEBSOCKET_ENABLED > 0)
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -561,3 +563,5 @@ TOLUA_API int tolua_web_socket_open(lua_State* tolua_S){
     tolua_endmodule(tolua_S);
 	return 1;
 }
+
+#endif // (CC_WEBSOCKET_ENABLED > 0)
