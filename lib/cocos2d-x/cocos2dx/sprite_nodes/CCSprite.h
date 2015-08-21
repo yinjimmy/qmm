@@ -380,6 +380,9 @@ public:
      */
     virtual void setDisplayFrame(CCSpriteFrame *pNewFrame);
 
+    void setDisplayFrameIndex(int frameIndex);
+    int getDisplayFrameIndex() const;
+
     /**
      * Returns whether or not a CCSpriteFrame is being displayed
      */
@@ -549,6 +552,9 @@ protected:
     // image is flipped
     bool m_bFlipX;                              /// Whether the sprite is flipped horizaontally or not.
     bool m_bFlipY;                              /// Whether the sprite is flipped vertically or not.
+
+    // animation frame index, -1 means error
+    int m_frameIndex;
 };
 
 

@@ -2351,6 +2351,7 @@ void CCAnimate::stop(void)
     if (m_pAnimation->getRestoreOriginalFrame() && m_pTarget)
     {
         ((CCSprite*)(m_pTarget))->setDisplayFrame(m_pOrigFrame);
+        ((CCSprite*)(m_pTarget))->setDisplayFrameIndex(-1);
     }
 
     CCActionInterval::stop();
@@ -2384,6 +2385,7 @@ void CCAnimate::update(float t)
             CCAnimationFrame* frame = (CCAnimationFrame*)frames->objectAtIndex(i);
             frameToDisplay = frame->getSpriteFrame();
             ((CCSprite*)m_pTarget)->setDisplayFrame(frameToDisplay);
+            ((CCSprite*)m_pTarget)->setDisplayFrameIndex(i);
 
             CCDictionary* dict = frame->getUserInfo();
             if( dict )

@@ -296,8 +296,9 @@ bool CCSprite::initWithSpriteFrameName(const char *pszSpriteFrameName)
  */
 
 CCSprite::CCSprite(void)
-: m_bShouldBeHidden(false),
-m_pobTexture(NULL)
+: m_bShouldBeHidden(false)
+, m_pobTexture(NULL)
+, m_frameIndex(-1)
 {
 }
 
@@ -980,6 +981,16 @@ void CCSprite::setDisplayFrame(CCSpriteFrame *pNewFrame)
     // update rect
     m_bRectRotated = pNewFrame->isRotated();
     setTextureRect(pNewFrame->getRect(), m_bRectRotated, pNewFrame->getOriginalSize());
+}
+
+void CCSprite::setDisplayFrameIndex(int frameIndex)
+{
+    m_frameIndex = frameIndex;
+}
+
+int CCSprite::getDisplayFrameIndex() const
+{
+    return m_frameIndex;
 }
 
 void CCSprite::setDisplayFrameWithAnimationName(const char *animationName, int frameIndex)
